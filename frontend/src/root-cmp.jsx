@@ -9,6 +9,8 @@ import { AppFooter } from "./cmps/app-footer";
 import { Home } from "./pages/home";
 import { ToyEdit } from './pages/toy-edit';
 import { ToyDetails } from './pages/toy-details';
+import { DashBoard } from './pages/dashboard-page';
+import { About } from './pages/about';
 
 
 
@@ -22,6 +24,8 @@ export function App() {
                     <main>
                         <Routes>
                             <Route element={<Home />} path="/" />
+                            <Route element={<About />} path="/about" />
+                            <Route element={<DashBoard />} path="/data" />
                             <Route element={<ToyIndex />} path="/toy" />
                             <Route element={<ToyDetails />} path="/toy/:toyId" />
                             <Route element={<ToyEdit />} path="/toy/edit" />

@@ -1,9 +1,18 @@
 import { useEffect, useRef, useState } from "react"
 import { toyService } from "../services/toy.service"
 import { utilService } from "../services/util.service"
+import * as React from 'react';
+import Button from '@mui/material/Button';
 
+import Select from 'react-select';
 
-export function ToyFilter({setFilterBy}){
+const options = [
+    { value: 'all', label: 'All' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+];
+
+export function ToyFilter({ setFilterBy }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState(toyService.getDefaultFilter())
 
@@ -55,8 +64,20 @@ export function ToyFilter({setFilterBy}){
                     className="check-box"
                 />
             </label>
+            <label className='filter-label'>
+                {/* <span className='filter-label'>Filter By</span> */}
+                <Select
+                defaultValue={filterByToEdit.type}
+                // value={filterByToEdit.type}
+                onChange={handleChange}
+                options={options}
+                name="type"
+            />
+            </label>
 
             <button hidden>Filter</button>
         </form>
+       {/* <Button variant="contained">Hello World</Button> */}
     </section>
 }
+

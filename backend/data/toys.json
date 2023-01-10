@@ -18,5 +18,23 @@
     "createdAt": 1673364560499,
     "inStock": true,
     "_id": "JmeLY"
+  },
+  {
+    "name": "gedszef",
+    "price": 2,
+    "labels": [],
+    "createdAt": 1673370252026,
+    "inStock": true,
+    "_id": "tWBVe"
+  },
+  {
+    "name": "y5rd6",
+    "price": 1,
+    "labels": [
+      "Baby"
+    ],
+    "createdAt": 1673370984851,
+    "inStock": true,
+    "_id": "FJ0d4"
   }
 ]

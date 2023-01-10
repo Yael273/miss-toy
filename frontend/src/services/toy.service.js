@@ -37,7 +37,6 @@ function query(filterBy = getDefaultFilter()) {
 }
 
 function getById(toyId) {
-    console.log('hi')
     return httpService.get(`${BASE_URL}${toyId}`)
 }
 
@@ -64,7 +63,7 @@ function getEmptyToy() {
 }
 
 function getDefaultFilter() {
-    return { txt: '', maxPrice: 0, isStock: '' }
+    return { txt: '', maxPrice: 0, isStock: '', type: 'all', }
 }
 
 function getDefaultSort() {
@@ -87,23 +86,4 @@ function getFilterFromSearchParams(searchParams) {
 // TEST DATA
 // storageService.post(STORAGE_KEY, toy).then(x => console.log(x))
 
-// function query(filterBy = getDefaultFilter()) {
-//     // return axios.get(BASE_URL).then(res => res.data)
-//     return storageService.query(STORAGE_KEY)
-//         .then(toys => {
-//             if (filterBy.txt) {
-//                 const regex = new RegExp(filterBy.txt, 'i')
-//                 toys = toys.filter((toy) => regex.test(toy.name))
-//             }
-//             if (filterBy.maxPrice) {
-//                 toys = toys.filter(toy => toy.price <= filterBy.maxPrice)
-//             }
-//             return toys
 
-//         })
-// }
-
-// function remove(toyId) {
-//     // return Promise.reject('Not now!')
-//     return storageService.remove(STORAGE_KEY, toyId)
-// }

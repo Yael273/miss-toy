@@ -29,16 +29,16 @@ app.use(express.json())
 app.get('/api/toy', (req, res) => {
     console.log('req.query:', req.query)
     // const { title, labels, minSeverity, pageIdx, pageSize, sortByCat, desc } = req.query
-    const { name, maxPrice } = req.query
+    // const { name, maxPrice } = req.query
     // const sortBy = {
     //     sortByCat, desc
     // }
-    const filterBy = {
-        name, maxPrice
-    }
+    // const filterBy = {
+    //     name, maxPrice
+    // }
     // toyService.query(filterBy, sortBy)
+    const filterBy = req.query
     toyService.query(filterBy)
-    // toyService.query()
         .then((toys) => {
             res.send(toys)
         })

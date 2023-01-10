@@ -2,6 +2,7 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const toyService = require('./services/toy.service.js')
 const cors = require('cors')
+const path = require('path')
 const app = express()
 // const PORT = 3050
 

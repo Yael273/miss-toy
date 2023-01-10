@@ -1,0 +1,57 @@
+/* Setup */
+@import "setup/vars.css";
+@import "setup/typography.css";
+
+/* Base */
+@import "base/base.css";
+@import "base/helpers.css";
+@import "base/layout.css";
+@import "base/forms.css";
+
+/* Components */
+@import "cmps/app-header.css";
+@import "cmps/toy-index.css";
+@import "cmps/toy-list.css";
+@import "cmps/toy-preview.css";
+@import "cmps/toy-filter.css";
+@import "cmps/app-footer.css";
+
+.popup-menu {
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    background-color: white;
+    border: red 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.multi-select {
+    position: relative;
+  }
+  
+  .multi-select .selected-options-container {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .multi-select .options-container {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .multi-select .options-container.open {
+    display: unset;
+  }
+  
+  
+  .multi-select .options-container>* {
+    padding: 5px;
+    border: 1px solid black;
+    background: white;
+  }

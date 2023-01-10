@@ -23,41 +23,6 @@ function query(filterBy) {
     return Promise.resolve(toys)
 }
 
-// function query() {
-//     return Promise.resolve(toys)
-// }
-
-// function query(filterBy, sortBy) {
-//     let filteredToys = toys
-//     if (filterBy.title) {
-//         const regex = new RegExp(filterBy.title, 'i')
-//         filteredToys = filteredToys.filter(toy => regex.test(toy.title))
-//     }
-//     if (filterBy.minSeverity) {
-//         filteredToys = filteredToys.filter(toy => toy.severity >= +filterBy.minSeverity)
-//     }
-
-//     // Sorting
-//     if (sortBy) {
-//         if (sortBy.sortByCat === 'createdAt' || sortBy.sortByCat === 'severity') {
-//             filteredToys.sort((b1, b2) => (b1[sortBy.sortByCat] - b2[sortBy.sortByCat]) * sortBy.desc)
-//         }
-//         if (filterBy.sortBy === 'title') {
-//             filteredToys.sort((b1, b2) => b1.title.localeCompare(b2.title) * sortBy.desc)
-//         }
-//     }
-
-//     // Paging
-//     const totalPages = Math.ceil(filteredToys.length / +filterBy.pageSize)
-//     if (filterBy.pageIdx !== undefined) {
-//         const startIdx = filterBy.pageIdx * +filterBy.pageSize
-//         filteredToys = filteredToys.slice(startIdx, +filterBy.pageSize + startIdx)
-//     }
-
-//     return Promise.resolve({ totalPages, toys: filteredToys })
-
-// }
-
 function get(toyId) {
     const toy = toys.find(toy => toy._id === toyId)
     if (!toy) return Promise.reject('Toy not found')
@@ -110,3 +75,38 @@ function _writeToysToFile() {
         })
     })
 }
+
+// function query() {
+//     return Promise.resolve(toys)
+// }
+
+// function query(filterBy, sortBy) {
+//     let filteredToys = toys
+//     if (filterBy.title) {
+//         const regex = new RegExp(filterBy.title, 'i')
+//         filteredToys = filteredToys.filter(toy => regex.test(toy.title))
+//     }
+//     if (filterBy.minSeverity) {
+//         filteredToys = filteredToys.filter(toy => toy.severity >= +filterBy.minSeverity)
+//     }
+
+//     // Sorting
+//     if (sortBy) {
+//         if (sortBy.sortByCat === 'createdAt' || sortBy.sortByCat === 'severity') {
+//             filteredToys.sort((b1, b2) => (b1[sortBy.sortByCat] - b2[sortBy.sortByCat]) * sortBy.desc)
+//         }
+//         if (filterBy.sortBy === 'title') {
+//             filteredToys.sort((b1, b2) => b1.title.localeCompare(b2.title) * sortBy.desc)
+//         }
+//     }
+
+//     // Paging
+//     const totalPages = Math.ceil(filteredToys.length / +filterBy.pageSize)
+//     if (filterBy.pageIdx !== undefined) {
+//         const startIdx = filterBy.pageIdx * +filterBy.pageSize
+//         filteredToys = filteredToys.slice(startIdx, +filterBy.pageSize + startIdx)
+//     }
+
+//     return Promise.resolve({ totalPages, toys: filteredToys })
+
+// }

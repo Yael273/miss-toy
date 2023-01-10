@@ -1,8 +1,10 @@
 
 import { storageService } from './async-storage.service.js'
+import { httpService } from './http.service.js'
 import { utilService } from './util.service.js'
 
 const STORAGE_KEY = 'toyDB'
+const BASE_URL = 'toy/'
 
 export const toyService = {
     query,
@@ -12,7 +14,8 @@ export const toyService = {
     getEmptyToy,
     getDefaultFilter,
     getLabels,
-    getDefaultSort
+    getDefaultSort,
+    getFilterFromSearchParams
 }
 
 const labels = ["On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor", "Battery Powered"]
@@ -29,33 +32,24 @@ const toy = {
 
 
 function query(filterBy = getDefaultFilter()) {
-    // return axios.get(BASE_URL).then(res => res.data)
-    return storageService.query(STORAGE_KEY)
-        .then(toys => {
-            if (filterBy.txt) {
-                const regex = new RegExp(filterBy.txt, 'i')
-                toys = toys.filter((toy) => regex.test(toy.name))
-            }
-            if (filterBy.maxPrice) {
-                toys = toys.filter(toy => toy.price <= filterBy.maxPrice)
-            }
-            return toys
+    const queryParams = `?name=${filterBy.txt}&maxPrice=${filterBy.maxPrice}`
+    return httpService.get(BASE_URL + queryParams)
+}
 
-        })
-}
 function getById(toyId) {
-    return storageService.get(STORAGE_KEY, toyId)
+    console.log('hi')
+    return httpService.get(`${BASE_URL}${toyId}`)
 }
+
 function remove(toyId) {
-    // return Promise.reject('Not now!')
-    return storageService.remove(STORAGE_KEY, toyId)
+    return httpService.delete(BASE_URL, toyId)
 }
+
 function save(toy) {
     if (toy._id) {
-        return storageService.put(STORAGE_KEY, toy)
+        return httpService.put(BASE_URL, toy)
     } else {
-        // when switching to backend - remove the next line
-        return storageService.post(STORAGE_KEY, toy)
+        return httpService.post(BASE_URL, toy)
     }
 }
 
@@ -81,6 +75,35 @@ function getLabels() {
     return labels
 }
 
+function getFilterFromSearchParams(searchParams) {
+    const emptyFilter = getDefaultFilter()
+    const filterBy = {}
+    for (const field in emptyFilter) {
+        filterBy[field] = searchParams.get(field) || ''
+    }
+    return filterBy
+}
+
 // TEST DATA
 // storageService.post(STORAGE_KEY, toy).then(x => console.log(x))
 
+// function query(filterBy = getDefaultFilter()) {
+//     // return axios.get(BASE_URL).then(res => res.data)
+//     return storageService.query(STORAGE_KEY)
+//         .then(toys => {
+//             if (filterBy.txt) {
+//                 const regex = new RegExp(filterBy.txt, 'i')
+//                 toys = toys.filter((toy) => regex.test(toy.name))
+//             }
+//             if (filterBy.maxPrice) {
+//                 toys = toys.filter(toy => toy.price <= filterBy.maxPrice)
+//             }
+//             return toys
+
+//         })
+// }
+
+// function remove(toyId) {
+//     // return Promise.reject('Not now!')
+//     return storageService.remove(STORAGE_KEY, toyId)
+// }

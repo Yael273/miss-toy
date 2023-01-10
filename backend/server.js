@@ -1,10 +1,9 @@
 const express = require('express')
 const cookieParser = require('cookie-parser')
-
 const toyService = require('./services/toy.service.js')
-
+const cors = require('cors')
 const app = express()
-const PORT = 3050
+// const PORT = 3050
 
 // const COOKIE_AGE = 1000 * 15
 // const IS_PREMIUM = false
@@ -129,4 +128,10 @@ app.delete('/api/toy/:toyId', (req, res) => {
         })
 })
 
-app.listen(PORT, () => console.log('Server ready at port', PORT))
+app.get('/**', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+})
+
+const port = process.env.PORT || 3030;
+
+app.listen(port, () => console.log('Server ready at port', port))

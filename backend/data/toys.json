@@ -12,13 +12,11 @@
     "inStock": true
   },
   {
-    "_id": "AxEC3",
-    "createdAt": 1673297731816,
-    "inStock": true
-  },
-  {
-    "_id": "3URNq",
-    "createdAt": 1673298086162,
-    "inStock": true
+    "name": "uikb",
+    "price": 50,
+    "labels": [],
+    "createdAt": 1673364560499,
+    "inStock": true,
+    "_id": "JmeLY"
   }
 ]

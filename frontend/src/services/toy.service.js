@@ -41,15 +41,13 @@ function getById(toyId) {
 }
 
 function remove(toyId) {
-    return httpService.delete(BASE_URL, toyId)
+    return httpService.delete(`${BASE_URL}${toyId}`)
 }
 
 function save(toy) {
-    if (toy._id) {
-        return httpService.put(BASE_URL, toy)
-    } else {
-        return httpService.post(BASE_URL, toy)
-    }
+    const url = (toy._id) ? BASE_URL + `${toy._id}` : BASE_URL
+    const method = (toy._id) ? 'put' : 'post'
+    return httpService[method](url, toy).then(res => res.data)
 }
 
 function getEmptyToy() {

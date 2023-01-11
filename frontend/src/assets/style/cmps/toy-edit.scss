@@ -1,0 +1,54 @@
+.toy-edit {
+    margin: 50px auto;
+    border-radius: 0.5rem;
+    border: lightgray solid 2px;
+    width: 30vw;
+    background-color: $clr2bg;
+    padding: 30px 0;
+
+    & .add-save-btns {
+        margin: 20px;
+
+        & button {
+            margin: 5px;
+            font-weight: 700;
+        }
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    & .edit-input {
+        font-family: product-sans-regular, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        padding: 5px 10px;
+        border-radius: 0.5rem;
+        border: lightgray solid 1px;
+
+        &:focus {
+            background-color: $clr1bg;
+            color: $clr3;
+        }
+
+        &::placeholder {
+            color: $clr3;
+        }
+
+    }
+}
+
+.toy-add {
+    margin: 10px;
+
+    & a {
+        color: $gray1;
+        font-weight: 800;
+        margin: 0;
+    }
+
+
+}

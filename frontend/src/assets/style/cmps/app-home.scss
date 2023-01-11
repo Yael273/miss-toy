@@ -1,0 +1,25 @@
+.home-container {
+    background-color: $clr1bg;
+    padding: 0 100px 10px 100px;
+    margin: 0;
+    min-height: 90vh;
+
+
+    & .img-container {
+        padding-top: 40px;
+
+        & img {
+            width: 700px;
+        }
+    }
+
+    & a {
+        font-size: rem(20px);
+        background-color: $clr4;
+        color: $clr5;
+        font-weight: 800;
+        position: relative;
+        bottom: 25vh;
+        padding: 30px 50px;
+    }
+}

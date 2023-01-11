@@ -12,14 +12,6 @@
     "inStock": true
   },
   {
-    "name": "uikb",
-    "price": 50,
-    "labels": [],
-    "createdAt": 1673364560499,
-    "inStock": true,
-    "_id": "JmeLY"
-  },
-  {
     "name": "gedszef",
     "price": 2,
     "labels": [],
@@ -28,13 +20,37 @@
     "_id": "tWBVe"
   },
   {
-    "name": "y5rd6",
-    "price": 1,
+    "name": "hellofes",
+    "price": 6,
     "labels": [
       "Baby"
     ],
     "createdAt": 1673370984851,
     "inStock": true,
     "_id": "FJ0d4"
+  },
+  {
+    "name": "y5ry",
+    "price": 0,
+    "labels": [],
+    "createdAt": 1673468304927,
+    "inStock": true,
+    "_id": "OWISV"
+  },
+  {
+    "name": "5ryg5",
+    "price": 0,
+    "labels": [],
+    "createdAt": 1673468310116,
+    "inStock": true,
+    "_id": "5vmXz"
+  },
+  {
+    "name": "hujik",
+    "price": 10,
+    "labels": [],
+    "createdAt": 1673470962626,
+    "inStock": true,
+    "_id": "cS5O5"
   }
 ]

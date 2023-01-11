@@ -29,15 +29,20 @@ export function MultiSelect({ onSetLabels }) {
     return <section className="multi-select">
 
         <div className="selected-options-container" onClick={() => setIsOptionsModalOpen(!isOptionsModalOpen)}>
-            selected :
-            {selectedLabels.map(label => <div key={label}>{label}</div>)}
+            <select> selected :
+            selected
+            {selectedLabels.map(label => <option key={label}>{label}</option>)}
+            </select>
         </div>
 
         <div className={`options-container  ${isOptionsModalOpen ? ' open' : ''}`}>
-            {labels.map(label => <div onClick={() => onSelectLabel(label)} key={label}>
+        <select>
+            {labels.map(label => <option onClick={() => onSelectLabel(label)} key={label}>
                 {label} {isLabelChosen(label) ? 'V' : ''}
-            </div>
+            </option>
             )}
+            </select>
         </div>
+        
     </section >
 }

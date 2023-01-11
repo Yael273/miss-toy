@@ -14,8 +14,8 @@ export function ToySort({ sort, onSetSort }) {
 
     return <section className="toy-sort">
         <h3>Sort toys:</h3>
-        <button onClick={() => handleSortChange('name')}>By name</button>
-        <button onClick={() => handleSortChange('price')}>By price</button>
-        <button onClick={handleDirectionChange}>Change direction {sort.asc ? '^' : 'v'}</button>
+        <button className='btn btn-dark' onClick={() => handleSortChange('name')}>By name</button>
+        <button className='btn btn-dark' onClick={() => handleSortChange('price')}>By price</button>
+        <button className='btn btn-dark' onClick={handleDirectionChange}>Change direction {sort.asc ? '^' : 'v'}</button>
     </section>
 }

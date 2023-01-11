@@ -1,68 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, RadialLinearScale } from 'chart.js';
 import { Doughnut, PolarArea } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
+import { loadToys } from '../store/action/toy.action';
+import { LabelsCountChart } from '../cmps/label-count-chart';
+import { LabelsPriceChart } from '../cmps/label-price-count';
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
-
 
 export function DashBoard() {
 
     const toys = useSelector((storeState) => storeState.toyModule.toys)
 
-    // const toysLabels = toys.map(toy => {
-    //     return toy.labels
-    // })
+    useEffect(() => {
+        loadToys()
+    }, [])
 
-    // const labels = toysLabels.map(label => {
-    //     label.map(res => {
-    //         console.log('res', res);
-    //         return res
-    //     })
-    // })
+    function getChartsData() {
+        const chartsData = toys.reduce(
+            (acc, toy) => {
+                toy.labels.forEach((label) => {
+                    acc.labelsCountMap[label] = acc.labelsCountMap[label] ? ++acc.labelsCountMap[label] : 1
+                    acc.labelsPriceMap[label] = acc.labelsPriceMap[label] ? (acc.labelsPriceMap[label] += toy.price) : toy.price
+                })
 
-    // const count = labels.reduce((acc, label) => {
-    //     if (label === undefined) {
-    //         return
-    //     }
-    //     console.log('acc', acc);
-    //     acc.push(label)
-    //     return acc
-
-    // }, [])
-
-    // console.log('count', count);
-
-
-    const data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [
-            {
-                label: 'number of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                ],
-                borderWidth: 2,
+                return acc
             },
-        ],
-    };
+            { labelsCountMap: {}, labelsPriceMap: {} }
+        )
+        Object.keys(chartsData.labelsPriceMap).forEach((label) => (chartsData.labelsPriceMap[label] /= chartsData.labelsCountMap[label]))
+
+        return chartsData
+    }
+
+    const { labelsPriceMap, labelsCountMap } = getChartsData()
+
     return (
-        <div style={{ width: '50%', margin: 'auto' }}>
-            <Doughnut data={data} />
-        </div>
+        <section className="home-page">
+            <h2>Toys Data</h2>
+            <div className="charts flex">
+                <LabelsCountChart dataMap={labelsCountMap} />
+                <LabelsPriceChart dataMap={labelsPriceMap} />
+            </div>
+        </section>
     )
+    
 }

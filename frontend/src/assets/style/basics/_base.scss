@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: product-sans-regular, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $gray4;
+    line-height: lh(26px);
+
+    @media (max-width: 1300px) {
+        font-size: 13px;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: $clr2bg-light;
+    text-align: center;
+
+    @include for-normal-layout {
+        &.sidebar-open {
+            overflow: hidden;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: .5em 0 .5em;
+    // line-height: lh(40px, 29px);
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    text-decoration: none;
+    // color: unset;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+        color: $clr1bg;
+    }
+
+    // &.active{
+
+    // }
+}
+
+.btn {
+    @include btn;
+
+    &-dark {
+        @include btn($type: dark);
+    }
+
+    &-light {
+        @include btn($type: light);
+    }
+}
+
+input {
+    font-family: product-sans-regular, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    border: lightgray solid 1px;
+
+    &:focus {
+        background-color: $clr1bg;
+        color: $clr3;
+    }
+
+    &::placeholder {
+        color: $clr3;
+    }
+
+}
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object {
+    max-width: 100%
+}
+
+/* Simple and useful CSS Debugging Technique */
+.debug * {
+    outline: 1px solid gold
+}

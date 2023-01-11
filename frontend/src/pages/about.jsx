@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import GoogleMapReact from 'google-map-react';
+import { AppMap } from "../cmps/app-map";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const Loc1 = ({ text }) => <div style={{ fontSize: '2.5rem' }}>{text}</div>
+const Loc2 = ({ text }) => <div style={{ fontSize: '2.5rem' }}>{text}</div>
+const Loc3 = ({ text }) => <div style={{ fontSize: '2.5rem' }}>{text}</div>
 
 export function About() {
 
@@ -14,22 +18,9 @@ export function About() {
 
     return <section className="about">
         <h1>About Us</h1>
-        <h4>Locations</h4>
-        <div style={{ height: '70vh', width: '90%', margin: 'auto' }}>
-            <GoogleMapReact
-                onClick={handleClick}
-                bootstrapURLKeys={{ key: "AIzaSyA5YAKbctMWmj2etXv-KY7MSXDMGaWr0qs" }}
-                defaultCenter={coordinates}
-                center={coordinates}
-                defaultZoom={zoom}
-            >
-                <AnyReactComponent
-                    // lat={coordinates.lat}
-                    // lng={coordinates.lng}
-                    {...coordinates}
-                    text="🍎"
-                />
-            </GoogleMapReact>
+        <h4>Our Locations</h4>
+        <div className="map-container">
+            <AppMap />
         </div>
     </section>
 }

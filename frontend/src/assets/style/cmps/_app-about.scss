@@ -1,0 +1,23 @@
+.about {
+
+    h1 {
+        color: $clr4;
+        font-size: rem(45px);
+        margin: 10px;
+    }
+
+    & .map {
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    & .map-container{
+        padding-bottom: 20px;
+        width: 70vw;
+        margin: auto;
+        // border-radius: 0.5rem;
+        // border: lightgray solid 2px;
+    }
+}

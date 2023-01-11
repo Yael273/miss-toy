@@ -59,7 +59,7 @@ export function ToyEdit() {
         ev.preventDefault()
         toyService.save(toyToEdit)
             .then((toy) => {
-                console.log('toy saved', toy);
+                console.log('toy saved', toyToEdit);
                 showSuccessMsg('Toy saved!')
                 navigate('/toy')
             })
@@ -76,9 +76,9 @@ export function ToyEdit() {
     function getYesNo() {
         return toyToEdit.inStock
     }
-
+ 
     return <section className="toy-edit">
-        <h2>{toyToEdit.id ? 'Edit this toy' : 'Add a new toy'}</h2>
+        <h2>{toyToEdit._id ? 'Edit this toy' : 'Add a new toy'}</h2>
 
         <form onSubmit={onSaveToy}>
             <label htmlFor="name">Name : </label>
@@ -99,7 +99,7 @@ export function ToyEdit() {
             />
 
             <div>
-                <MultiSelect onSetLabels={onSetLabels} />
+                {/* <MultiSelect onSetLabels={onSetLabels} /> */}
             </div>
             <div>
                 <select value={getYesNo() || '1'} onChange={handleChange} name="inStock" className='edit-input'>
@@ -110,8 +110,8 @@ export function ToyEdit() {
                     <option value=''>No</option>
                 </select>
             </div>
-            <div>
-                <button>{toyToEdit._id ? 'Save' : 'Add'}</button>
+            <div className="add-save-btns">
+                <button className="btn btn-dark">{toyToEdit._id ? 'Save' : 'Add'}</button>
                 <Link to="/toy">Cancel</Link>
             </div>
 

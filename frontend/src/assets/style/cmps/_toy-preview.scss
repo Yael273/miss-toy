@@ -1,0 +1,38 @@
+.toy-preview {
+    min-width: 200px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    // border: 2px lightgray solid;
+    border-radius: 0.5rem;
+    background-color: $clr1bg-light;
+    box-shadow: 1px 1px 4px 0px grey;
+
+    & .hidden-btns {
+        display: flex;
+        align-items: center;
+        // justify-content: flex-end;
+        gap: 10px;
+        padding: 5px 10px;
+        // opacity: 1;
+
+        & button {
+            margin: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    // &:hover & .hidden-btns{
+    //     opacity: 1;
+    // }
+
+    .image-container{
+        width: 60px;
+        margin: auto;
+    }
+}

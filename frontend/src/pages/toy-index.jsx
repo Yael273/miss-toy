@@ -74,14 +74,20 @@ export function ToyIndex() {
     if (!toys) return <div>Loading...</div>
     return <section className="toy-index">
 
-        <ToyFilter setFilterBy={setFilterBy} />
-        <ToySort sort={sort} onSetSort={onSetSort} />
+        <div className="filter-container">
+            <ToyFilter setFilterBy={setFilterBy} />
+            {/* <ToySort sort={sort} onSetSort={onSetSort} /> */}
+            <Link to={`/toy/edit`}>
+                <button className="btn btn-dark toy-add">
+                    Add Toy
+                </button>
+            </Link>
+        </div>
 
-        <Link to={`/toy/edit`}>Add Toy</Link>
         <ToyList
             toys={toys}
             onRemoveToy={onRemoveToy}
-            // onEditToy={onEditToy}
+        // onEditToy={onEditToy}
         />
     </section>
 }

@@ -33,7 +33,7 @@ export function App() {
                             <Route element={<ToyEdit />} path="/toy/edit/:toyId" />
                         </Routes>
                     </main>
-                    {/* <AppFooter /> */}
+                    <AppFooter />
                 </section>
             </Router>
         </Provider>

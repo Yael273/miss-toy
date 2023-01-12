@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { toyService } from "../services/toy.service"
 import { utilService } from "../services/util.service"
+import imgUrl from '../assets/img/default1.png';
 
 
 export function ToyDetails() {
@@ -33,6 +34,10 @@ export function ToyDetails() {
 
     if (!toy) return <h1>loading...</h1>
     return <section className="toy-details">
+
+<div className="image-container">
+                <img src={imgUrl} alt="" />
+            </div>
         <h1>{toy.name}</h1>
         <h4>Price: ${toy.price}</h4>
         <p>{utilService.formatTime(toy.createdAt)}</p>
@@ -40,6 +45,6 @@ export function ToyDetails() {
             return label + ' '
         })}</p>
         <p>{toy.inStock ? 'in stock' : 'out of stock'}</p>
-        <button className="return" onClick={onGoBack}>return</button>
+        <button className="return btn btn-dark" onClick={onGoBack}>return</button>
     </section>
 }

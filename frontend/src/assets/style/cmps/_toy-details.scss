@@ -1,0 +1,17 @@
+.toy-details {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    border: lightgray solid 2px;
+    border-radius: 0.5rem;
+    height: 55vh;
+    padding: 10px;
+    width: 50vw;
+    background-color: $clr2bg;
+
+    & .image-container {
+        width: 100px;
+    }
+}

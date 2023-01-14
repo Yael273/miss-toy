@@ -31,23 +31,32 @@ const toy = {
 }
 
 
-function query(filterBy = getDefaultFilter()) {
-    const queryParams = `?name=${filterBy.txt}&maxPrice=${filterBy.maxPrice}`
-    return httpService.get(BASE_URL + queryParams)
+async function query(filterBy = getDefaultFilter()) {
+    // const queryParams = `?name=${filterBy.txt}&maxPrice=${filterBy.maxPrice}`
+    // return await httpService.get(BASE_URL + queryParams)
+    return httpService.get(BASE_URL, filterBy)
 }
 
-function getById(toyId) {
-    return httpService.get(`${BASE_URL}${toyId}`)
+async function getById(toyId) {
+    return await httpService.get(`${BASE_URL}${toyId}`)
 }
 
-function remove(toyId) {
-    return httpService.delete(`${BASE_URL}${toyId}`)
+async function remove(toyId) {
+    return await httpService.delete(`${BASE_URL}${toyId}`)
 }
 
 function save(toy) {
     const url = (toy._id) ? BASE_URL + `${toy._id}` : BASE_URL
     const method = (toy._id) ? 'put' : 'post'
-    return httpService[method](url, toy).then(res => res.data)
+    const res = httpService[method](url, toy)
+    try {
+        // return res.data
+        return res
+    } catch (err) {
+        console.log('error occurred in save:',err )
+    }
+    //OLD VERSION
+    // return httpService[method](url, toy).then(res => res.data)
 }
 
 function getEmptyToy() {

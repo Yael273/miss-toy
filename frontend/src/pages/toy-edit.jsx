@@ -40,14 +40,24 @@ export function ToyEdit() {
         loadToy()
     }, [])
 
-    function loadToy() {
-        toyService.getById(toyId)
-            .then((toy) => setToyToEdit(toy))
-            .catch((err) => {
-                console.log('Had issues in toy details', err)
-                navigate('/toy')
-            })
+    async function loadToy() {
+        const toy = await toyService.getById(toyId)
+        try {
+            setToyToEdit(toy)
+        } catch (err) {
+            console.log('Had issues in toy details', err)
+            navigate('/toy')
+        }
     }
+
+    // function loadToyOLD() {
+    //     toyService.getById(toyId)
+    //         .then((toy) => setToyToEdit(toy))
+    //         .catch((err) => {
+    //             console.log('Had issues in toy details', err)
+    //             navigate('/toy')
+    //         })
+    // }
 
     function handleChange({ target }) {
         let { value, type, name: field } = target
@@ -55,19 +65,32 @@ export function ToyEdit() {
         setToyToEdit((prevToy) => ({ ...prevToy, [field]: value }))
     }
 
-    function onSaveToy(ev) {
+    async function onSaveToy(ev) {
         ev.preventDefault()
-        toyService.save(toyToEdit)
-            .then((toy) => {
-                console.log('toy saved', toyToEdit);
-                showSuccessMsg('Toy saved!')
-                navigate('/toy')
-            })
-            .catch(err => {
-                console.log('err', err)
-                showErrorMsg('Cannot save toy')
-            })
+       await toyService.save(toyToEdit)
+       try {
+        console.log('toy saved', toyToEdit);
+        showSuccessMsg('Toy saved!')
+        navigate('/toy')
+       } catch (err) {
+        console.log('err', err)
+        showErrorMsg('Cannot save toy')
+       }
+ 
     }
+    // function onSaveToyOLD(ev) {
+    //     ev.preventDefault()
+    //     toyService.save(toyToEdit)
+    //         .then((toy) => {
+    //             console.log('toy saved', toyToEdit);
+    //             showSuccessMsg('Toy saved!')
+    //             navigate('/toy')
+    //         })
+    //         .catch(err => {
+    //             console.log('err', err)
+    //             showErrorMsg('Cannot save toy')
+    //         })
+    // }
 
     function onSetLabels(labels) {
         setToyToEdit({ ...toyToEdit, labels })
@@ -76,7 +99,7 @@ export function ToyEdit() {
     function getYesNo() {
         return toyToEdit.inStock
     }
- 
+
     return <section className="toy-edit">
         <h2>{toyToEdit._id ? 'Edit this toy' : 'Add a new toy'}</h2>
 

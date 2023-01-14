@@ -1,0 +1,515 @@
+13.1.2023, 14:43:41 - INFO - Server is running on port: 3030 
+13.1.2023, 14:43:52 - ERROR - while finding toy fdsz | BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer 
+13.1.2023, 14:43:52 - ERROR - Failed to get toy | BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer 
+13.1.2023, 14:44:43 - ERROR - while finding toy ObjectId("63c03f4d46b72977f17e239c") | BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer 
+13.1.2023, 14:44:43 - ERROR - Failed to get toy | BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer 
+13.1.2023, 14:45:05 - ERROR - while finding toy ("63c03f4d46b72977f17e239c") | BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer 
+13.1.2023, 14:45:05 - ERROR - Failed to get toy | BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer 
+13.1.2023, 14:49:13 - INFO - Req was made 
+13.1.2023, 14:49:13 - DEBUG - Getting Toys 
+13.1.2023, 14:49:14 - INFO - Req was made 
+13.1.2023, 14:49:14 - DEBUG - Getting Toys 
+13.1.2023, 14:49:22 - INFO - Req was made 
+13.1.2023, 14:49:22 - DEBUG - Getting Toys 
+13.1.2023, 14:49:25 - INFO - Req was made 
+13.1.2023, 14:49:25 - DEBUG - Getting Toys 
+13.1.2023, 14:49:25 - INFO - Req was made 
+13.1.2023, 14:49:25 - DEBUG - Getting Toys 
+13.1.2023, 14:50:27 - INFO - Req was made 
+13.1.2023, 14:50:27 - DEBUG - Getting Toys 
+13.1.2023, 14:50:27 - INFO - Req was made 
+13.1.2023, 14:50:27 - DEBUG - Getting Toys 
+13.1.2023, 14:50:49 - INFO - Req was made 
+13.1.2023, 14:50:49 - DEBUG - Getting Toys 
+13.1.2023, 14:50:50 - DEBUG - Getting Toys 
+13.1.2023, 14:50:50 - INFO - Req was made 
+13.1.2023, 14:54:09 - DEBUG - Getting Toys 
+13.1.2023, 14:54:09 - INFO - Req was made 
+13.1.2023, 14:54:09 - INFO - Req was made 
+13.1.2023, 14:54:09 - DEBUG - Getting Toys 
+13.1.2023, 14:56:29 - INFO - Req was made 
+13.1.2023, 14:56:29 - DEBUG - Getting Toys 
+13.1.2023, 14:56:29 - DEBUG - Getting Toys 
+13.1.2023, 14:56:29 - INFO - Req was made 
+13.1.2023, 15:22:33 - DEBUG - auth.service - login with username: puki 
+13.1.2023, 15:22:34 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 15:22:59 - DEBUG - auth.service - login with username: puki 
+13.1.2023, 15:22:59 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 15:23:12 - DEBUG - auth.service - login with username: muki 
+13.1.2023, 15:23:12 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 15:23:41 - INFO - Req was made 
+13.1.2023, 15:23:41 - DEBUG - Getting Toys 
+13.1.2023, 15:23:41 - INFO - Req was made 
+13.1.2023, 15:23:41 - DEBUG - Getting Toys 
+13.1.2023, 15:23:42 - DEBUG - Getting Toys 
+13.1.2023, 15:23:42 - INFO - Req was made 
+13.1.2023, 15:23:47 - INFO - Req was made 
+13.1.2023, 15:23:47 - DEBUG - Getting Toys 
+13.1.2023, 15:23:47 - INFO - Req was made 
+13.1.2023, 15:23:47 - DEBUG - Getting Toys 
+13.1.2023, 15:24:08 - DEBUG - auth.service - signup with username: yael, fullname: Yael 
+13.1.2023, 15:24:09 - DEBUG - auth.service - login with username: yael 
+13.1.2023, 15:24:09 - DEBUG - auth.route - new account created: {"username":"yael","password":"$2b$10$nbSsZJpP.qTtC3mJSbqQrONQ2KbZRx1/2CpDKRvflB1i35z8sbbxK","fullname":"Yael","_id":"63c15b789dd350ee20a2d0b5"} 
+13.1.2023, 15:24:09 - INFO - User login:  | {"_id":"63c15b789dd350ee20a2d0b5","username":"yael","fullname":"Yael"} 
+13.1.2023, 15:24:22 - DEBUG - Getting Toys 
+13.1.2023, 15:24:22 - INFO - Req was made 
+13.1.2023, 15:24:22 - INFO - Req was made 
+13.1.2023, 15:24:22 - DEBUG - Getting Toys 
+13.1.2023, 15:26:01 - INFO - Req was made 
+13.1.2023, 15:26:01 - DEBUG - Getting Toys 
+13.1.2023, 15:26:01 - INFO - Req was made 
+13.1.2023, 15:26:01 - DEBUG - Getting Toys 
+13.1.2023, 15:26:21 - DEBUG - Getting Toys 
+13.1.2023, 15:26:21 - INFO - Req was made 
+13.1.2023, 15:26:21 - INFO - Req was made 
+13.1.2023, 15:26:21 - DEBUG - Getting Toys 
+13.1.2023, 15:27:30 - INFO - Req was made 
+13.1.2023, 15:27:30 - DEBUG - Getting Toys 
+13.1.2023, 15:27:41 - INFO - Req was made 
+13.1.2023, 15:27:41 - DEBUG - Getting Toys 
+13.1.2023, 15:27:49 - INFO - Req was made 
+13.1.2023, 15:27:49 - DEBUG - Getting Toys 
+13.1.2023, 15:27:49 - INFO - Req was made 
+13.1.2023, 15:27:49 - DEBUG - Getting Toys 
+13.1.2023, 15:34:03 - INFO - Req was made 
+13.1.2023, 15:34:03 - DEBUG - Getting Toys 
+13.1.2023, 15:36:21 - INFO - Req was made 
+13.1.2023, 15:36:21 - DEBUG - Getting Toys 
+13.1.2023, 15:36:22 - INFO - Req was made 
+13.1.2023, 15:36:22 - DEBUG - Getting Toys 
+13.1.2023, 15:42:26 - INFO - Req was made 
+13.1.2023, 15:42:26 - DEBUG - Getting Toys 
+13.1.2023, 15:42:29 - INFO - Req was made 
+13.1.2023, 15:42:29 - DEBUG - Getting Toys 
+13.1.2023, 15:42:29 - INFO - Req was made 
+13.1.2023, 15:42:29 - DEBUG - Getting Toys 
+13.1.2023, 15:43:50 - DEBUG - Getting Toys 
+13.1.2023, 15:43:50 - INFO - Req was made 
+13.1.2023, 15:43:50 - INFO - Req was made 
+13.1.2023, 15:43:50 - DEBUG - Getting Toys 
+13.1.2023, 15:44:25 - INFO - Req was made 
+13.1.2023, 15:44:25 - DEBUG - Getting Toys 
+13.1.2023, 15:44:26 - INFO - Req was made 
+13.1.2023, 15:44:26 - DEBUG - Getting Toys 
+13.1.2023, 15:44:27 - INFO - Req was made 
+13.1.2023, 15:44:27 - DEBUG - Getting Toys 
+13.1.2023, 15:44:33 - INFO - Req was made 
+13.1.2023, 15:44:33 - DEBUG - Getting Toys 
+13.1.2023, 15:44:33 - INFO - Req was made 
+13.1.2023, 15:44:33 - DEBUG - Getting Toys 
+13.1.2023, 15:47:11 - DEBUG - auth.service - login with username: yael 
+13.1.2023, 15:47:12 - INFO - User login:  | {"_id":"63c15b789dd350ee20a2d0b5","username":"yael","fullname":"Yael"} 
+13.1.2023, 15:47:19 - INFO - Req was made 
+13.1.2023, 15:47:19 - DEBUG - Getting Toys 
+13.1.2023, 15:47:19 - DEBUG - Getting Toys 
+13.1.2023, 15:47:19 - INFO - Req was made 
+13.1.2023, 15:47:20 - INFO - Req was made 
+13.1.2023, 15:47:20 - DEBUG - Getting Toys 
+13.1.2023, 15:48:24 - INFO - Req was made 
+13.1.2023, 15:48:24 - DEBUG - Getting Toys 
+13.1.2023, 15:48:30 - INFO - Req was made 
+13.1.2023, 15:48:30 - DEBUG - Getting Toys 
+13.1.2023, 15:48:30 - INFO - Req was made 
+13.1.2023, 15:48:30 - DEBUG - Getting Toys 
+13.1.2023, 15:49:13 - INFO - Req was made 
+13.1.2023, 15:49:13 - DEBUG - Getting Toys 
+13.1.2023, 15:49:15 - INFO - Req was made 
+13.1.2023, 15:49:15 - DEBUG - Getting Toys 
+13.1.2023, 15:49:16 - INFO - Req was made 
+13.1.2023, 15:49:16 - DEBUG - Getting Toys 
+13.1.2023, 15:53:22 - INFO - Req was made 
+13.1.2023, 15:53:22 - DEBUG - Getting Toys 
+13.1.2023, 15:53:22 - INFO - Req was made 
+13.1.2023, 15:53:22 - DEBUG - Getting Toys 
+13.1.2023, 15:53:51 - INFO - Req was made 
+13.1.2023, 15:53:51 - DEBUG - Getting Toys 
+13.1.2023, 15:53:55 - INFO - Req was made 
+13.1.2023, 15:53:55 - DEBUG - Getting Toys 
+13.1.2023, 15:53:55 - INFO - Req was made 
+13.1.2023, 15:53:55 - DEBUG - Getting Toys 
+13.1.2023, 15:58:38 - DEBUG - Getting Toys 
+13.1.2023, 15:58:38 - INFO - Req was made 
+13.1.2023, 15:58:38 - INFO - Req was made 
+13.1.2023, 15:58:38 - DEBUG - Getting Toys 
+13.1.2023, 15:58:46 - INFO - Req was made 
+13.1.2023, 15:58:46 - DEBUG - Getting Toys 
+13.1.2023, 15:58:49 - INFO - Req was made 
+13.1.2023, 15:58:49 - DEBUG - Getting Toys 
+13.1.2023, 15:58:50 - INFO - Req was made 
+13.1.2023, 15:58:50 - DEBUG - Getting Toys 
+13.1.2023, 15:58:56 - INFO - Req was made 
+13.1.2023, 15:58:56 - DEBUG - Getting Toys 
+13.1.2023, 15:59:44 - INFO - Req was made 
+13.1.2023, 15:59:44 - DEBUG - Getting Toys 
+13.1.2023, 15:59:44 - DEBUG - Getting Toys 
+13.1.2023, 15:59:44 - INFO - Req was made 
+13.1.2023, 15:59:45 - INFO - Req was made 
+13.1.2023, 15:59:45 - DEBUG - Getting Toys 
+13.1.2023, 15:59:46 - INFO - Req was made 
+13.1.2023, 15:59:46 - DEBUG - Getting Toys 
+13.1.2023, 15:59:47 - INFO - Req was made 
+13.1.2023, 15:59:47 - DEBUG - Getting Toys 
+13.1.2023, 16:16:45 - INFO - Req was made 
+13.1.2023, 16:16:45 - DEBUG - Getting Toys 
+13.1.2023, 16:16:45 - INFO - Req was made 
+13.1.2023, 16:16:45 - DEBUG - Getting Toys 
+13.1.2023, 16:18:20 - INFO - Req was made 
+13.1.2023, 16:18:20 - DEBUG - Getting Toys 
+13.1.2023, 16:18:32 - INFO - Req was made 
+13.1.2023, 16:18:32 - DEBUG - Getting Toys 
+13.1.2023, 16:18:33 - INFO - Req was made 
+13.1.2023, 16:18:33 - DEBUG - Getting Toys 
+13.1.2023, 16:19:00 - INFO - Req was made 
+13.1.2023, 16:19:00 - DEBUG - Getting Toys 
+13.1.2023, 16:19:00 - INFO - Req was made 
+13.1.2023, 16:19:00 - DEBUG - Getting Toys 
+13.1.2023, 16:19:02 - DEBUG - Getting Toys 
+13.1.2023, 16:19:02 - INFO - Req was made 
+13.1.2023, 16:19:12 - INFO - Req was made 
+13.1.2023, 16:19:12 - DEBUG - Getting Toys 
+13.1.2023, 16:19:16 - INFO - Req was made 
+13.1.2023, 16:19:16 - DEBUG - Getting Toys 
+13.1.2023, 16:20:39 - INFO - Req was made 
+13.1.2023, 16:20:39 - DEBUG - Getting Toys 
+13.1.2023, 16:20:46 - INFO - Req was made 
+13.1.2023, 16:20:46 - DEBUG - Getting Toys 
+13.1.2023, 16:20:46 - INFO - Req was made 
+13.1.2023, 16:20:46 - DEBUG - Getting Toys 
+13.1.2023, 16:20:54 - INFO - Req was made 
+13.1.2023, 16:20:54 - DEBUG - Getting Toys 
+13.1.2023, 16:20:55 - INFO - Req was made 
+13.1.2023, 16:20:55 - DEBUG - Getting Toys 
+13.1.2023, 16:21:21 - INFO - Req was made 
+13.1.2023, 16:21:21 - DEBUG - Getting Toys 
+13.1.2023, 16:21:24 - INFO - Req was made 
+13.1.2023, 16:21:24 - DEBUG - Getting Toys 
+13.1.2023, 16:21:24 - INFO - Req was made 
+13.1.2023, 16:21:24 - DEBUG - Getting Toys 
+13.1.2023, 16:25:23 - INFO - Req was made 
+13.1.2023, 16:25:23 - DEBUG - Getting Toys 
+13.1.2023, 16:26:05 - INFO - Req was made 
+13.1.2023, 16:26:05 - DEBUG - Getting Toys 
+13.1.2023, 16:29:06 - INFO - Req was made 
+13.1.2023, 16:29:06 - DEBUG - Getting Toys 
+13.1.2023, 16:29:07 - DEBUG - Getting Toys 
+13.1.2023, 16:29:07 - INFO - Req was made 
+13.1.2023, 16:31:11 - INFO - Req was made 
+13.1.2023, 16:31:11 - DEBUG - Getting Toys 
+13.1.2023, 16:31:55 - INFO - Req was made 
+13.1.2023, 16:31:55 - DEBUG - Getting Toys 
+13.1.2023, 16:31:55 - DEBUG - Getting Toys 
+13.1.2023, 16:31:55 - INFO - Req was made 
+13.1.2023, 16:33:49 - DEBUG - auth.service - login with username: yael 
+13.1.2023, 16:33:49 - INFO - User login:  | {"_id":"63c15b789dd350ee20a2d0b5","username":"yael","fullname":"Yael"} 
+13.1.2023, 16:33:55 - INFO - Req was made 
+13.1.2023, 16:33:55 - DEBUG - Getting Toys 
+13.1.2023, 16:33:56 - INFO - Req was made 
+13.1.2023, 16:33:56 - DEBUG - Getting Toys 
+13.1.2023, 16:36:10 - INFO - Req was made 
+13.1.2023, 16:36:10 - DEBUG - Getting Toys 
+13.1.2023, 16:36:11 - INFO - Req was made 
+13.1.2023, 16:36:11 - DEBUG - Getting Toys 
+13.1.2023, 16:37:01 - INFO - Req was made 
+13.1.2023, 16:37:01 - DEBUG - Getting Toys 
+13.1.2023, 16:37:01 - INFO - Req was made 
+13.1.2023, 16:37:01 - DEBUG - Getting Toys 
+13.1.2023, 16:45:25 - DEBUG - auth.service - login with username: muki 
+13.1.2023, 16:45:25 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 16:45:27 - INFO - Req was made 
+13.1.2023, 16:45:27 - DEBUG - Getting Toys 
+13.1.2023, 16:45:28 - INFO - Req was made 
+13.1.2023, 16:45:28 - DEBUG - Getting Toys 
+13.1.2023, 16:45:43 - INFO - Req was made 
+13.1.2023, 16:45:43 - DEBUG - Getting Toys 
+13.1.2023, 16:45:43 - INFO - Req was made 
+13.1.2023, 16:45:43 - DEBUG - Getting Toys 
+13.1.2023, 16:50:48 - INFO - Req was made 
+13.1.2023, 16:50:48 - DEBUG - Getting Toys 
+13.1.2023, 16:50:49 - INFO - Req was made 
+13.1.2023, 16:50:49 - DEBUG - Getting Toys 
+13.1.2023, 16:51:35 - DEBUG - auth.service - signup with username: grd, fullname: nj 
+13.1.2023, 16:51:35 - DEBUG - auth.route - new account created: {"username":"grd","password":"$2b$10$oMWZTDljYYnrP8hA7VGCpuL/tW7mhLe1brkTPqieMGjmGdd33QIwW","fullname":"nj","_id":"63c16ff79dd350ee20a2d0ba"} 
+13.1.2023, 16:51:35 - DEBUG - auth.service - login with username: grd 
+13.1.2023, 16:51:36 - INFO - User login:  | {"_id":"63c16ff79dd350ee20a2d0ba","username":"grd","fullname":"nj"} 
+13.1.2023, 16:52:40 - DEBUG - auth.service - login with username: puki 
+13.1.2023, 16:52:40 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 16:52:54 - DEBUG - auth.service - login with username: puki 
+13.1.2023, 16:52:54 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 16:53:54 - DEBUG - auth.service - login with username: puki 
+13.1.2023, 16:53:54 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 16:54:23 - DEBUG - auth.service - login with username: puki 
+13.1.2023, 16:54:23 - ERROR - Failed to Login Invalid username or password 
+13.1.2023, 19:02:24 - INFO - Req was made 
+13.1.2023, 19:02:25 - DEBUG - Getting Toys 
+13.1.2023, 19:02:26 - INFO - Req was made 
+13.1.2023, 19:02:26 - DEBUG - Getting Toys 
+13.1.2023, 19:02:43 - DEBUG - Getting Toys 
+13.1.2023, 19:02:43 - INFO - Req was made 
+13.1.2023, 19:02:43 - DEBUG - Getting Toys 
+13.1.2023, 19:02:43 - INFO - Req was made 
+13.1.2023, 19:02:52 - INFO - Req was made 
+13.1.2023, 19:02:52 - DEBUG - Getting Toys 
+13.1.2023, 19:02:53 - DEBUG - Getting Toys 
+13.1.2023, 19:02:53 - INFO - Req was made 
+13.1.2023, 19:02:56 - DEBUG - Getting Toys 
+13.1.2023, 19:02:56 - INFO - Req was made 
+14.1.2023, 11:38:59 - INFO - Req was made 
+14.1.2023, 11:39:00 - DEBUG - Getting Toys 
+14.1.2023, 11:39:01 - INFO - Req was made 
+14.1.2023, 11:39:01 - DEBUG - Getting Toys 
+14.1.2023, 11:39:01 - INFO - Req was made 
+14.1.2023, 11:39:01 - DEBUG - Getting Toys 
+14.1.2023, 11:56:55 - INFO - Server is running on port: 3030 
+14.1.2023, 11:57:46 - DEBUG - Getting Toys 
+14.1.2023, 11:57:46 - INFO - Req was made 
+14.1.2023, 11:57:47 - INFO - Req was made 
+14.1.2023, 11:57:47 - DEBUG - Getting Toys 
+14.1.2023, 11:57:48 - INFO - Req was made 
+14.1.2023, 11:57:48 - DEBUG - Getting Toys 
+14.1.2023, 11:58:09 - INFO - Req was made 
+14.1.2023, 11:58:09 - DEBUG - Getting Toys 
+14.1.2023, 11:58:11 - INFO - Req was made 
+14.1.2023, 11:58:11 - DEBUG - Getting Toys 
+14.1.2023, 11:58:11 - INFO - Req was made 
+14.1.2023, 11:58:11 - DEBUG - Getting Toys 
+14.1.2023, 11:58:34 - INFO - Req was made 
+14.1.2023, 11:58:34 - DEBUG - Getting Toys 
+14.1.2023, 11:58:35 - INFO - Req was made 
+14.1.2023, 11:58:35 - DEBUG - Getting Toys 
+14.1.2023, 11:58:36 - DEBUG - Getting Toys 
+14.1.2023, 11:58:36 - INFO - Req was made 
+14.1.2023, 11:58:37 - INFO - Req was made 
+14.1.2023, 11:58:37 - DEBUG - Getting Toys 
+14.1.2023, 11:58:38 - INFO - Req was made 
+14.1.2023, 11:58:38 - DEBUG - Getting Toys 
+14.1.2023, 11:58:48 - DEBUG - auth.service - login with username: puki 
+14.1.2023, 11:58:48 - ERROR - Failed to Login Invalid username or password 
+14.1.2023, 11:59:00 - INFO - Req was made 
+14.1.2023, 11:59:00 - DEBUG - Getting Toys 
+14.1.2023, 11:59:01 - INFO - Req was made 
+14.1.2023, 11:59:01 - DEBUG - Getting Toys 
+14.1.2023, 11:59:14 - DEBUG - auth.service - login with username: puki 
+14.1.2023, 11:59:14 - ERROR - Failed to Login Invalid username or password 
+14.1.2023, 11:59:24 - DEBUG - auth.service - signup with username: yael, fullname: yael 
+14.1.2023, 11:59:25 - DEBUG - auth.route - new account created: {"username":"yael","password":"$2b$10$F.vjg71fOuouMWp.wOT.P.SkJrzVfJflOdB4aYLZsfjiQHj.5MN.O","fullname":"yael","_id":"63c27cfd1b2d628c7e82694e"} 
+14.1.2023, 11:59:25 - DEBUG - auth.service - login with username: yael 
+14.1.2023, 11:59:25 - INFO - User login:  | {"_id":"63c15b789dd350ee20a2d0b5","username":"yael","fullname":"Yael"} 
+14.1.2023, 12:01:49 - INFO - Req was made 
+14.1.2023, 12:01:49 - DEBUG - Getting Toys 
+14.1.2023, 12:01:50 - INFO - Req was made 
+14.1.2023, 12:01:50 - DEBUG - Getting Toys 
+14.1.2023, 12:01:50 - INFO - Req was made 
+14.1.2023, 12:01:50 - DEBUG - Getting Toys 
+14.1.2023, 12:06:14 - DEBUG - auth.service - signup with username: grd, fullname: grd grd 
+14.1.2023, 12:06:14 - DEBUG - auth.route - new account created: {"username":"grd","password":"$2b$10$77YTtPg9Bl1P1UGxPICuE.q5D4i6TWzz4PerragrUXR1KBa2r3eWC","fullname":"grd grd","_id":"63c27e961b2d628c7e82694f"} 
+14.1.2023, 12:06:14 - DEBUG - auth.service - login with username: grd 
+14.1.2023, 12:06:14 - INFO - User login:  | {"_id":"63c16ff79dd350ee20a2d0ba","username":"grd","fullname":"nj"} 
+14.1.2023, 12:07:41 - INFO - Server is running on port: 3030 
+14.1.2023, 12:08:38 - INFO - Server is running on port: 3030 
+14.1.2023, 12:08:50 - INFO - Server is running on port: 3030 
+14.1.2023, 12:09:54 - INFO - Server is running on port: 3030 
+14.1.2023, 12:09:56 - INFO - Req was made 
+14.1.2023, 12:09:56 - DEBUG - Getting Toys 
+14.1.2023, 12:09:57 - INFO - Req was made 
+14.1.2023, 12:09:57 - DEBUG - Getting Toys 
+14.1.2023, 12:09:58 - INFO - Req was made 
+14.1.2023, 12:09:58 - DEBUG - Getting Toys 
+14.1.2023, 12:09:59 - INFO - Req was made 
+14.1.2023, 12:09:59 - DEBUG - Getting Toys 
+14.1.2023, 12:10:01 - INFO - Req was made 
+14.1.2023, 12:10:01 - DEBUG - Getting Toys 
+14.1.2023, 12:10:03 - INFO - Req was made 
+14.1.2023, 12:10:03 - DEBUG - Getting Toys 
+14.1.2023, 12:10:04 - DEBUG - Getting Toys 
+14.1.2023, 12:10:04 - INFO - Req was made 
+14.1.2023, 12:10:06 - DEBUG - Getting Toys 
+14.1.2023, 12:10:06 - INFO - Req was made 
+14.1.2023, 12:10:07 - INFO - Req was made 
+14.1.2023, 12:10:07 - DEBUG - Getting Toys 
+14.1.2023, 12:10:07 - INFO - Req was made 
+14.1.2023, 12:10:07 - DEBUG - Getting Toys 
+14.1.2023, 12:10:25 - INFO - Req was made 
+14.1.2023, 12:10:25 - DEBUG - Getting Toys 
+14.1.2023, 12:10:26 - INFO - Req was made 
+14.1.2023, 12:10:26 - DEBUG - Getting Toys 
+14.1.2023, 12:10:26 - DEBUG - Getting Toys 
+14.1.2023, 12:10:26 - INFO - Req was made 
+14.1.2023, 12:10:27 - INFO - Req was made 
+14.1.2023, 12:10:27 - DEBUG - Getting Toys 
+14.1.2023, 12:10:28 - INFO - Req was made 
+14.1.2023, 12:10:28 - DEBUG - Getting Toys 
+14.1.2023, 12:10:29 - INFO - Req was made 
+14.1.2023, 12:10:29 - DEBUG - Getting Toys 
+14.1.2023, 12:10:29 - INFO - Req was made 
+14.1.2023, 12:10:29 - DEBUG - Getting Toys 
+14.1.2023, 12:10:52 - DEBUG - auth.service - signup with username: admin, fullname: admin 
+14.1.2023, 12:10:53 - DEBUG - auth.route - new account created: {"username":"admin","password":"$2b$10$lDMzDvxSpO8iufgFdj6Z6eDorgy.deLMmjQJx5MbBUCiGbwA4T1NS","fullname":"admin","isAdmin":false,"_id":"63c27fad293d99d2682f80cc"} 
+14.1.2023, 12:10:53 - DEBUG - auth.service - login with username: admin 
+14.1.2023, 12:10:53 - INFO - User login:  | {"_id":"63c27fad293d99d2682f80cc","username":"admin","fullname":"admin","isAdmin":false} 
+14.1.2023, 12:15:56 - DEBUG - auth.service - signup with username: hi, fullname: hi 
+14.1.2023, 12:15:57 - DEBUG - auth.route - new account created: {"username":"hi","password":"$2b$10$sYt2ZhIjqm7zKbuWwbiiMOiXFHv7vKbEvK.nS0UWKNIgzLfScnaqG","fullname":"hi","isAdmin":false,"_id":"63c280dd293d99d2682f80cd"} 
+14.1.2023, 12:15:57 - DEBUG - auth.service - login with username: hi 
+14.1.2023, 12:15:57 - INFO - User login:  | {"_id":"63c280dd293d99d2682f80cd","username":"hi","fullname":"hi","isAdmin":false} 
+14.1.2023, 12:16:06 - INFO - Req was made 
+14.1.2023, 12:16:06 - DEBUG - Getting Toys 
+14.1.2023, 12:16:07 - INFO - Req was made 
+14.1.2023, 12:16:07 - DEBUG - Getting Toys 
+14.1.2023, 12:16:07 - INFO - Req was made 
+14.1.2023, 12:16:07 - DEBUG - Getting Toys 
+14.1.2023, 12:16:17 - INFO - Req was made 
+14.1.2023, 12:16:17 - DEBUG - Getting Toys 
+14.1.2023, 12:16:17 - DEBUG - Getting Toys 
+14.1.2023, 12:16:17 - INFO - Req was made 
+14.1.2023, 12:16:25 - INFO - Req was made 
+14.1.2023, 12:16:25 - DEBUG - Getting Toys 
+14.1.2023, 12:16:26 - INFO - Req was made 
+14.1.2023, 12:16:26 - DEBUG - Getting Toys 
+14.1.2023, 12:16:30 - INFO - Req was made 
+14.1.2023, 12:16:30 - DEBUG - Getting Toys 
+14.1.2023, 12:16:30 - INFO - Req was made 
+14.1.2023, 12:16:30 - DEBUG - Getting Toys 
+14.1.2023, 12:16:34 - INFO - Req was made 
+14.1.2023, 12:16:34 - DEBUG - Getting Toys 
+14.1.2023, 12:16:35 - INFO - Req was made 
+14.1.2023, 12:16:35 - DEBUG - Getting Toys 
+14.1.2023, 12:16:37 - DEBUG - Getting Toys 
+14.1.2023, 12:16:37 - INFO - Req was made 
+14.1.2023, 12:16:37 - INFO - Req was made 
+14.1.2023, 12:16:37 - DEBUG - Getting Toys 
+14.1.2023, 12:16:47 - DEBUG - Getting Toys 
+14.1.2023, 12:16:47 - INFO - Req was made 
+14.1.2023, 12:16:50 - INFO - Req was made 
+14.1.2023, 12:16:50 - DEBUG - Getting Toys 
+14.1.2023, 12:16:51 - INFO - Req was made 
+14.1.2023, 12:16:51 - DEBUG - Getting Toys 
+14.1.2023, 12:16:56 - INFO - Req was made 
+14.1.2023, 12:16:56 - DEBUG - Getting Toys 
+14.1.2023, 12:16:57 - INFO - Req was made 
+14.1.2023, 12:16:57 - DEBUG - Getting Toys 
+14.1.2023, 12:16:57 - INFO - Req was made 
+14.1.2023, 12:16:57 - DEBUG - Getting Toys 
+14.1.2023, 12:20:02 - INFO - Req was made 
+14.1.2023, 12:20:02 - DEBUG - Getting Toys 
+14.1.2023, 12:20:02 - INFO - Req was made 
+14.1.2023, 12:20:02 - DEBUG - Getting Toys 
+14.1.2023, 12:20:20 - DEBUG - auth.service - signup with username: lll, fullname: lll 
+14.1.2023, 12:20:20 - DEBUG - auth.route - new account created: {"username":"lll","password":"$2b$10$mejhZ/QISrnqVvtjUjXWB.5.jJdGiBZvbd2cQbtHK.p9rwBYg/v02","fullname":"lll","isAdmin":false,"_id":"63c281e4293d99d2682f80cf"} 
+14.1.2023, 12:20:20 - DEBUG - auth.service - login with username: lll 
+14.1.2023, 12:20:20 - INFO - User login:  | {"_id":"63c281e4293d99d2682f80cf","username":"lll","fullname":"lll","isAdmin":false} 
+14.1.2023, 12:22:53 - INFO - Server is running on port: 3030 
+14.1.2023, 12:22:56 - INFO - Req was made 
+14.1.2023, 12:22:56 - DEBUG - Getting Toys 
+14.1.2023, 12:22:56 - INFO - Req was made 
+14.1.2023, 12:22:56 - DEBUG - Getting Toys 
+14.1.2023, 12:23:00 - INFO - Req was made 
+14.1.2023, 12:23:00 - DEBUG - Getting Toys 
+14.1.2023, 12:23:00 - INFO - Req was made 
+14.1.2023, 12:23:00 - DEBUG - Getting Toys 
+14.1.2023, 12:25:27 - INFO - Server is running on port: 3030 
+14.1.2023, 12:25:33 - INFO - Req was made 
+14.1.2023, 12:25:33 - DEBUG - Getting Toys 
+14.1.2023, 12:25:34 - DEBUG - Getting Toys 
+14.1.2023, 12:25:34 - INFO - Req was made 
+14.1.2023, 12:27:34 - INFO - Server is running on port: 3030 
+14.1.2023, 12:27:38 - INFO - Req was made 
+14.1.2023, 12:27:38 - DEBUG - Getting Toys 
+14.1.2023, 12:27:38 - INFO - Req was made 
+14.1.2023, 12:27:38 - DEBUG - Getting Toys 
+14.1.2023, 12:27:41 - INFO - Req was made 
+14.1.2023, 12:27:41 - DEBUG - Getting Toys 
+14.1.2023, 12:27:42 - INFO - Req was made 
+14.1.2023, 12:27:42 - DEBUG - Getting Toys 
+14.1.2023, 12:27:44 - INFO - Req was made 
+14.1.2023, 12:27:44 - DEBUG - Getting Toys 
+14.1.2023, 12:27:45 - DEBUG - Getting Toys 
+14.1.2023, 12:27:45 - INFO - Req was made 
+14.1.2023, 12:27:47 - INFO - Req was made 
+14.1.2023, 12:27:47 - DEBUG - Getting Toys 
+14.1.2023, 12:28:49 - INFO - Req was made 
+14.1.2023, 12:28:49 - DEBUG - Getting Toys 
+14.1.2023, 12:28:49 - INFO - Req was made 
+14.1.2023, 12:28:49 - DEBUG - Getting Toys 
+14.1.2023, 12:28:52 - DEBUG - Getting Toys 
+14.1.2023, 12:28:52 - INFO - Req was made 
+14.1.2023, 12:30:13 - INFO - Server is running on port: 3030 
+14.1.2023, 12:30:22 - INFO - Server is running on port: 3030 
+14.1.2023, 12:31:17 - INFO - Req was made 
+14.1.2023, 12:31:17 - DEBUG - Getting Toys 
+14.1.2023, 12:31:18 - DEBUG - Getting Toys 
+14.1.2023, 12:31:18 - INFO - Req was made 
+14.1.2023, 12:31:42 - INFO - Server is running on port: 3030 
+14.1.2023, 12:31:45 - INFO - Req was made 
+14.1.2023, 12:31:45 - DEBUG - Getting Toys 
+14.1.2023, 12:31:46 - INFO - Req was made 
+14.1.2023, 12:31:46 - DEBUG - Getting Toys 
+14.1.2023, 12:31:47 - INFO - Req was made 
+14.1.2023, 12:31:47 - DEBUG - Getting Toys 
+14.1.2023, 12:31:47 - INFO - Req was made 
+14.1.2023, 12:31:47 - DEBUG - Getting Toys 
+14.1.2023, 12:31:48 - DEBUG - Getting Toys 
+14.1.2023, 12:31:48 - INFO - Req was made 
+14.1.2023, 12:31:55 - INFO - Server is running on port: 3030 
+14.1.2023, 12:33:03 - INFO - Server is running on port: 3030 
+14.1.2023, 12:33:07 - INFO - Req was made 
+14.1.2023, 12:33:07 - DEBUG - Getting Toys 
+14.1.2023, 12:33:07 - INFO - Req was made 
+14.1.2023, 12:33:07 - DEBUG - Getting Toys 
+14.1.2023, 12:33:11 - INFO - Req was made 
+14.1.2023, 12:33:11 - DEBUG - Getting Toys 
+14.1.2023, 12:33:12 - DEBUG - Getting Toys 
+14.1.2023, 12:33:12 - INFO - Req was made 
+14.1.2023, 12:33:12 - INFO - Req was made 
+14.1.2023, 12:33:12 - DEBUG - Getting Toys 
+14.1.2023, 12:33:13 - INFO - Req was made 
+14.1.2023, 12:33:13 - DEBUG - Getting Toys 
+14.1.2023, 12:33:17 - INFO - Server is running on port: 3030 
+14.1.2023, 12:34:55 - INFO - Req was made 
+14.1.2023, 12:34:55 - DEBUG - Getting Toys 
+14.1.2023, 12:34:55 - DEBUG - Getting Toys 
+14.1.2023, 12:34:55 - INFO - Req was made 
+14.1.2023, 12:35:00 - INFO - Req was made 
+14.1.2023, 12:35:00 - DEBUG - Getting Toys 
+14.1.2023, 12:35:01 - INFO - Req was made 
+14.1.2023, 12:35:01 - DEBUG - Getting Toys 
+14.1.2023, 12:35:05 - INFO - Req was made 
+14.1.2023, 12:35:05 - DEBUG - Getting Toys 
+14.1.2023, 12:35:09 - INFO - Req was made 
+14.1.2023, 12:35:09 - DEBUG - Getting Toys 
+14.1.2023, 12:35:09 - INFO - Req was made 
+14.1.2023, 12:35:09 - DEBUG - Getting Toys 
+14.1.2023, 12:35:11 - INFO - Req was made 
+14.1.2023, 12:35:11 - DEBUG - Getting Toys 
+14.1.2023, 12:35:12 - DEBUG - Getting Toys 
+14.1.2023, 12:35:12 - INFO - Req was made 
+14.1.2023, 12:37:38 - INFO - Req was made 
+14.1.2023, 12:37:38 - DEBUG - Getting Toys 
+14.1.2023, 12:37:52 - INFO - Req was made 
+14.1.2023, 12:37:52 - DEBUG - Getting Toys 
+14.1.2023, 12:37:53 - INFO - Req was made 
+14.1.2023, 12:37:53 - DEBUG - Getting Toys 
+14.1.2023, 12:38:37 - INFO - Req was made 
+14.1.2023, 12:38:37 - DEBUG - Getting Toys 
+14.1.2023, 12:38:39 - INFO - Req was made 
+14.1.2023, 12:38:39 - DEBUG - Getting Toys 
+14.1.2023, 12:38:39 - INFO - Req was made 
+14.1.2023, 12:38:39 - DEBUG - Getting Toys 
+14.1.2023, 12:38:48 - INFO - Req was made 
+14.1.2023, 12:38:48 - DEBUG - Getting Toys 
+14.1.2023, 12:44:32 - DEBUG - auth.service - login with username: lll 
+14.1.2023, 12:44:32 - INFO - User login:  | {"_id":"63c281e4293d99d2682f80cf","username":"lll","fullname":"lll","isAdmin":false} 
+14.1.2023, 12:45:00 - DEBUG - auth.service - login with username: puki 
+14.1.2023, 12:45:00 - ERROR - Failed to Login Invalid username or password 
+14.1.2023, 12:45:33 - DEBUG - auth.service - login with username: puki 
+14.1.2023, 12:45:33 - ERROR - Failed to Login Invalid username or password 
+14.1.2023, 12:46:21 - DEBUG - Getting Toys 
+14.1.2023, 12:46:21 - INFO - Req was made 
+14.1.2023, 12:46:21 - INFO - Req was made 
+14.1.2023, 12:46:21 - DEBUG - Getting Toys 
+14.1.2023, 12:48:09 - INFO - Req was made 
+14.1.2023, 12:48:09 - DEBUG - Getting Toys 
+14.1.2023, 12:48:09 - INFO - Req was made 
+14.1.2023, 12:48:09 - DEBUG - Getting Toys 
+14.1.2023, 12:57:44 - INFO - Req was made 
+14.1.2023, 12:57:44 - DEBUG - Getting Toys 
+14.1.2023, 12:57:44 - INFO - Req was made 
+14.1.2023, 12:57:44 - DEBUG - Getting Toys 

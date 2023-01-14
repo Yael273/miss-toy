@@ -1,6 +1,6 @@
 
 const fs = require('fs')
-var toys = require('../data/toys.json')
+var toys = require('../../data/toys.json')
 const PAGE_SIZE = 3
 
 module.exports = {
@@ -35,8 +35,8 @@ function get(toyId) {
 function remove(toyId, loggedinUser) {
     const idx = toys.findIndex(toy => toy._id === toyId)
     if (idx === -1) return Promise.reject('No Such Toy')
-    // const toy = toys[idx]
-    // if (toy.owner._id !== loggedinUser._id) return Promise.reject('Not your Toy')
+    const toy = toys[idx]
+    if (toy.owner._id !== loggedinUser._id) return Promise.reject('Not your Toy')
     toys.splice(idx, 1)
     return _writeToysToFile()
 }
@@ -45,7 +45,7 @@ function save(toy, loggedinUser) {
     if (toy._id) {
         const toyToUpdate = toys.find(currToy => currToy._id === toy._id)
         if (!toyToUpdate) return Promise.reject('No such Toy')
-        // if (toyToUpdate.owner._id !== loggedinUser._id) return Promise.reject('Not your Toy')
+        if (toyToUpdate.owner._id !== loggedinUser._id) return Promise.reject('Not your Toy')
 
         toyToUpdate.name = toy.name
         toyToUpdate.price = toy.price
@@ -53,7 +53,7 @@ function save(toy, loggedinUser) {
         toy._id = _makeId()
         toy.createdAt = Date.now()
         toy.inStock = true
-        // toy.owner = loggedinUser
+        toy.owner = loggedinUser
         toys.push(toy)
     }
     return _writeToysToFile().then(() => toy)

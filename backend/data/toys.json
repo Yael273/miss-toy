@@ -12,14 +12,6 @@
     "inStock": true
   },
   {
-    "name": "gedszef",
-    "price": 2,
-    "labels": [],
-    "createdAt": 1673370252026,
-    "inStock": true,
-    "_id": "tWBVe"
-  },
-  {
     "name": "hellofes",
     "price": 6,
     "labels": [
@@ -30,27 +22,27 @@
     "_id": "FJ0d4"
   },
   {
-    "name": "y5ry",
-    "price": 0,
+    "name": "hi",
+    "price": 4,
     "labels": [],
-    "createdAt": 1673468304927,
+    "createdAt": 1673548744703,
     "inStock": true,
-    "_id": "OWISV"
+    "_id": "GgFgx"
   },
   {
-    "name": "5ryg5",
-    "price": 0,
+    "name": "yael",
+    "price": 2,
     "labels": [],
-    "createdAt": 1673468310116,
+    "createdAt": 1673607978572,
     "inStock": true,
-    "_id": "5vmXz"
+    "_id": "PzVBO"
   },
   {
-    "name": "hujik",
-    "price": 10,
+    "name": "fdsz",
+    "price": 3,
     "labels": [],
-    "createdAt": 1673470962626,
+    "createdAt": 1673608680971,
     "inStock": true,
-    "_id": "cS5O5"
+    "_id": "kaE5T"
   }
 ]

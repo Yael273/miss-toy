@@ -15,6 +15,8 @@ export function ToyIndex() {
     const filterBy = useSelector((storeState) => storeState.toyModule.filterBy)
     const [sort, setSort] = useState(toyService.getDefaultSort())
 
+    console.log('toys', toys);
+
     useEffect(() => {
         onLoadToys(filterBy, sort)
     }, [filterBy, sort])
@@ -23,49 +25,25 @@ export function ToyIndex() {
         setFilter(filterBy)
     }
 
-    function onLoadToys(filterBy) {
-        loadToys(filterBy)
-            .then(() => {
-                showSuccessMsg('Toys loaded')
-            })
-            .catch(err => {
-                showErrorMsg('Cannot load toys')
-            })
+    async function onLoadToys(filterBy) {
+        await loadToys(filterBy)
+        try {
+            showSuccessMsg('Toys loaded')
+        } catch (err) {
+            showErrorMsg('Cannot load toys')
+        }
     }
 
-    function onRemoveToy(toyId) {
-        removeToy(toyId)
-            .then(() => {
-                showSuccessMsg('Toy removed')
-            })
-            .catch(err => {
-                showErrorMsg('Cannot remove toy')
-            })
+    async function onRemoveToy(toyId) {
+        await removeToy(toyId)
+        try {
+            console.log(toyId, 'removed');
+            showSuccessMsg('Toy removed')
+        } catch (err) {
+            showErrorMsg('Cannot remove toy')
+        }
+
     }
-
-    // function onAddToy() {
-    //     const toyToSave = toyService.getRandomToy()
-    //     saveToy(toyToSave)
-    //         .then((savedToy) => {
-    //             showSuccessMsg(`Toy added (id: ${savedToy._id})`)
-    //         })
-    //         .catch(err => {
-    //             showErrorMsg('Cannot add toy')
-    //         })
-    // }
-
-    // function onEditToy(toy) {
-    //     const price = +prompt('New price?')
-    //     const toyToSave = { ...toy, price }
-
-    //     saveToy(toyToSave)
-    //         .then((savedToy) => {
-    //             showSuccessMsg(`Toy updated to price: $${savedToy.price}`)
-    //         })
-    //         .catch(err => {
-    //             showErrorMsg('Cannot update toy')
-    //         })
-    // }
 
     function onSetSort(sort) {
         setSort(sort)
@@ -91,3 +69,47 @@ export function ToyIndex() {
         />
     </section>
 }
+
+// function onRemoveToyOLD(toyId) {
+    //     removeToy(toyId)
+    //         .then(() => {
+    //             showSuccessMsg('Toy removed')
+    //         })
+    //         .catch(err => {
+    //             showErrorMsg('Cannot remove toy')
+    //         })
+    // }
+
+    // function onAddToy() {
+    //     const toyToSave = toyService.getRandomToy()
+    //     saveToy(toyToSave)
+    //         .then((savedToy) => {
+    //             showSuccessMsg(`Toy added (id: ${savedToy._id})`)
+    //         })
+    //         .catch(err => {
+    //             showErrorMsg('Cannot add toy')
+    //         })
+    // }
+
+    // function onEditToy(toy) {
+    //     const price = +prompt('New price?')
+    //     const toyToSave = { ...toy, price }
+
+    //     saveToy(toyToSave)
+    //         .then((savedToy) => {
+    //             showSuccessMsg(`Toy updated to price: $${savedToy.price}`)
+    //         })
+    //         .catch(err => {
+    //             showErrorMsg('Cannot update toy')
+    //         })
+    // }
+
+        // function onLoadToysOLD(filterBy) {
+    //     loadToys(filterBy)
+    //         .then(() => {
+    //             showSuccessMsg('Toys loaded')
+    //         })
+    //         .catch(err => {
+    //             showErrorMsg('Cannot load toys')
+    //         })
+    // }

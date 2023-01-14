@@ -38,7 +38,7 @@ export function AppHeader() {
             {user && <NavLink to="user/details">Profile</NavLink>}
             {!user && <Link className="login-btn" to="user/login">Login</Link>}
           
-           {user && <button onClick={onLogout}>Logout</button>}
+           {user && <button className="btn" onClick={onLogout}>Logout</button>}
         </nav>
     </section>
 }

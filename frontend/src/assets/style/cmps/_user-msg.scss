@@ -1,0 +1,9 @@
+.user-msg{
+    background-color: aqua;
+    width: 100vw;
+
+    & .success{
+        background-color: aquamarine;
+        width: 50vw;
+    }
+}

@@ -24,7 +24,7 @@ export function ToyDetails() {
             console.log('Had issues in toy details', err)
             navigate('/toy')
         }
-    
+
     }
 
     // function loadToyOLD() {
@@ -46,9 +46,9 @@ export function ToyDetails() {
     if (!toy) return <h1>loading...</h1>
     return <section className="toy-details">
 
-<div className="image-container">
-                <img src={imgUrl} alt="" />
-            </div>
+        <div className="image-container">
+            <img src={imgUrl} alt="" />
+        </div>
         <h1>{toy.name}</h1>
         <h4>Price: ${toy.price}</h4>
         <p>{utilService.formatTime(toy.createdAt)}</p>
@@ -57,5 +57,18 @@ export function ToyDetails() {
         })}</p>
         <p>{toy.inStock ? 'in stock' : 'out of stock'}</p>
         <button className="return btn btn-dark" onClick={onGoBack}>return</button>
+        <div className="comments-container">
+            <h2>Comments: </h2>
+            {(!toy.msgs) ? 'no comments' :
+            <div className="comments">
+                {toy.msgs?.map(msg => {
+                    return <p key={msg.id}> {msg.txt}</p>
+                })}
+                {toy.msgs?.map(msg => {
+                    return <p key={msg.id} className="msg-fullname">by {msg.by.fullname}</p>
+                })}
+            </div>
+            }
+        </div>
     </section>
 }

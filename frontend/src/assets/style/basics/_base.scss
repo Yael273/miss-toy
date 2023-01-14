@@ -82,6 +82,23 @@ input {
     }
 
 }
+select {
+    font-family: product-sans-regular, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    border: lightgray solid 1px;
+
+    &:focus {
+        background-color: $clr1bg;
+        color: $clr3;
+    }
+
+    &::placeholder {
+        color: $clr3;
+    }
+
+}
 
 /* Dont stretch my Media */
 img,

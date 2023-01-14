@@ -5,6 +5,7 @@
     width: 30vw;
     background-color: $clr2bg;
     padding: 30px 0;
+    height: 50vh;
 
     & .add-save-btns {
         margin: 20px;
@@ -48,6 +49,36 @@
         color: $gray1;
         font-weight: 800;
         margin: 0;
+    }
+
+
+}
+
+.multi-select {
+    position: relative;
+
+    & .selected-options-container {
+        display: flex;
+        gap: 5px;
+    }
+
+    & .options-container {
+        display: none;
+        position: absolute;
+        // top: 20px;
+        // left: 20px;
+
+        &.open {
+            display: unset;
+        }
+
+    }
+
+    & .options-container>* {
+        padding: 5px;
+        border: 1px solid lightgray;
+        // border-radius: 0.5rem;
+        background: white;
     }
 
 

@@ -7,7 +7,8 @@ async function getToys(req, res) {
     logger.debug('Getting Toys')
     const filterBy = {
       txt: req.query.txt || '',
-      maxPrice: req.query.price || 0
+      maxPrice: req.query.price || 0,
+      // inStock: req.query.inStock || true
     }
     const toys = await toyService.query(filterBy)
     res.json(toys)

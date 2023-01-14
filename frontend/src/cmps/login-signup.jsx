@@ -88,7 +88,7 @@ export function LoginSignup({ setUser }) {
                     required
                 />}
 
-                <button>{isSignupState ? 'Signup' : 'Login'}</button>
+                <button className='btn btn-dark'>{isSignupState ? 'Signup' : 'Login'}</button>
             </form>
 
             <div className="btns">

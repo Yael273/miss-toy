@@ -3,11 +3,12 @@ const logger = require('../../services/logger.service')
 const utilService = require('../../services/util.service')
 const ObjectId = require('mongodb').ObjectId
 
-async function query(filterBy = { txt: '', maxPrice: 0 }) {
+async function query(filterBy = { txt: '', maxPrice: 0, inStock: true }) {
     try {
         const criteria = {
             name: { $regex: filterBy.txt, $options: 'i' },
-            price: { $gte: filterBy.maxPrice }
+            price: { $gte: filterBy.maxPrice },
+            // inStock: { $eq: filterBy.inStock }
         }
         const collection = await dbService.getCollection('toy')
         var toys = await collection.find(criteria).toArray()

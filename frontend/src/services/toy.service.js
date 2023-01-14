@@ -21,13 +21,32 @@ export const toyService = {
 const labels = ["On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor", "Battery Powered"]
 const msgs = [{ txt: 'hello', createdAt: new Date() }]
 
+// const toy = {
+//     "_id": "t101",
+//     "name": "Talking Doll",
+//     "price": 123,
+//     "labels": ["Doll", "Battery Powered", "Baby"],
+//     "createdAt": 1631031801011,
+//     "inStock": true
+// }
+
 const toy = {
-    "_id": "t101",
-    "name": "Talking Doll",
-    "price": 123,
-    "labels": ["Doll", "Battery Powered", "Baby"],
-    "createdAt": 1631031801011,
-    "inStock": true
+    _id: "t101",
+    name: "Talking Doll",
+    price: 123,
+    labels: ["Doll", "Battery Powered", "Baby"],
+    createdAt: 1631031801011,
+    inStock: true,
+    msgs: [
+        {
+            id: 'm101',
+            txt: 'Great toy, how much',
+            by: {
+                _id: 'u101',
+                fullname: 'Puki Ga'
+            }
+        }
+    ]
 }
 
 
@@ -53,7 +72,7 @@ function save(toy) {
         // return res.data
         return res
     } catch (err) {
-        console.log('error occurred in save:',err )
+        console.log('error occurred in save:', err)
     }
     //OLD VERSION
     // return httpService[method](url, toy).then(res => res.data)
@@ -70,7 +89,7 @@ function getEmptyToy() {
 }
 
 function getDefaultFilter() {
-    return { txt: '', maxPrice: 0, isStock: '', type: 'all', }
+    return { txt: '', maxPrice: 0, isStock: true, type: 'all', }
 }
 
 function getDefaultSort() {

@@ -8,6 +8,7 @@ import { loadToys } from "../store/action/toy.action"
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { useForm } from "../customHooks/useForm"
 // import { TextField } from '@mui/material';
 
 const SignupSchema = Yup.object().shape({
@@ -29,7 +30,8 @@ const SignupSchema = Yup.object().shape({
 
 export function ToyEdit() {
 
-    const [toyToEdit, setToyToEdit] = useState(toyService.getEmptyToy())
+    // const [toyToEdit, setToyToEdit] = useState(toyService.getEmptyToy())
+    const [toyToEdit, setToyToEdit, handleChange] = useForm(toyService.getEmptyToy())
     const navigate = useNavigate()
     const { toyId } = useParams()
 
@@ -50,20 +52,12 @@ export function ToyEdit() {
         }
     }
 
-    // function loadToyOLD() {
-    //     toyService.getById(toyId)
-    //         .then((toy) => setToyToEdit(toy))
-    //         .catch((err) => {
-    //             console.log('Had issues in toy details', err)
-    //             navigate('/toy')
-    //         })
-    // }
 
-    function handleChange({ target }) {
-        let { value, type, name: field } = target
-        value = type === 'number' ? +value : value
-        setToyToEdit((prevToy) => ({ ...prevToy, [field]: value }))
-    }
+    // function handleChange({ target }) {
+    //     let { value, type, name: field } = target
+    //     value = type === 'number' ? +value : value
+    //     setToyToEdit((prevToy) => ({ ...prevToy, [field]: value }))
+    // }
 
     async function onSaveToy(ev) {
         ev.preventDefault()
@@ -78,19 +72,7 @@ export function ToyEdit() {
        }
  
     }
-    // function onSaveToyOLD(ev) {
-    //     ev.preventDefault()
-    //     toyService.save(toyToEdit)
-    //         .then((toy) => {
-    //             console.log('toy saved', toyToEdit);
-    //             showSuccessMsg('Toy saved!')
-    //             navigate('/toy')
-    //         })
-    //         .catch(err => {
-    //             console.log('err', err)
-    //             showErrorMsg('Cannot save toy')
-    //         })
-    // }
+
 
     function onSetLabels(labels) {
         setToyToEdit({ ...toyToEdit, labels })
@@ -122,15 +104,15 @@ export function ToyEdit() {
             />
 
             <div>
-                {/* <MultiSelect onSetLabels={onSetLabels} /> */}
+                <MultiSelect onSetLabels={onSetLabels} />
             </div>
             <div>
-                <select value={getYesNo() || '1'} onChange={handleChange} name="inStock" className='edit-input'>
+                <select value={getYesNo() || '1'} onChange={handleChange} name="inStock" className='edit-input' >
                     <option value={'1'} disabled>
                         In Stock
                     </option>
-                    <option value={1}>Yes</option>
-                    <option value=''>No</option>
+                    <option value={true}>Yes</option>
+                    <option value={false}>No</option>
                 </select>
             </div>
             <div className="add-save-btns">
@@ -168,3 +150,28 @@ export function ToyEdit() {
         </Formik> */}
     </section>
 }
+
+
+    // function onSaveToyOLD(ev) {
+    //     ev.preventDefault()
+    //     toyService.save(toyToEdit)
+    //         .then((toy) => {
+    //             console.log('toy saved', toyToEdit);
+    //             showSuccessMsg('Toy saved!')
+    //             navigate('/toy')
+    //         })
+    //         .catch(err => {
+    //             console.log('err', err)
+    //             showErrorMsg('Cannot save toy')
+    //         })
+    // }
+
+    
+    // function loadToyOLD() {
+    //     toyService.getById(toyId)
+    //         .then((toy) => setToyToEdit(toy))
+    //         .catch((err) => {
+    //             console.log('Had issues in toy details', err)
+    //             navigate('/toy')
+    //         })
+    // }

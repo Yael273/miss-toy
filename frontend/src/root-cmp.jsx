@@ -14,6 +14,7 @@ import { DashBoard } from './pages/dashboard-page';
 import { About } from './pages/about';
 import { LoginSignup } from './cmps/login-signup';
 import { UserDetails } from './cmps/user-details';
+import { ReviewApp } from './pages/review-app';
 
 
 
@@ -33,8 +34,9 @@ export function App() {
                             <Route element={<ToyDetails />} path="/toy/:toyId" />
                             <Route element={<ToyEdit />} path="/toy/edit" />
                             <Route element={<ToyEdit />} path="/toy/edit/:toyId" />
-                            <Route path="/user/login" element={<LoginSignup />} />
-                            <Route path="/user/details" element={<UserDetails />} />
+                            <Route element={<LoginSignup />} path="/user/login"/>
+                            <Route element={<UserDetails /> } path="/user/details"/>
+                            <Route element={<ReviewApp />} path="/review"/>
                         </Routes>
                     </main>
                     <AppFooter />

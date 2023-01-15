@@ -13,12 +13,18 @@ export const userService = {
     getLoggedinUser,
     saveLocalUser,
     update,
+    getUsers
 }
 
 
 async function get(userId) {
     const user = await httpService.get(`user/${userId}`)
     return user
+}
+
+function getUsers() {
+  // return storageService.query('user')
+  return httpService.get(`user`)
 }
 
 async function signup(userCred) {
@@ -37,8 +43,8 @@ async function login(userCred) {
   }
 }
 
-function getEmptyCredentials(fullname = '', username = '', password = 'secret') {
-    return { fullname, username, password }
+function getEmptyCredentials(fullname = '', username = '', password = 'secret', imgUrl = '') {
+    return { fullname, username, password, imgUrl }
 }
 
 function getLoggedinUser() {

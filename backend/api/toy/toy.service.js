@@ -3,15 +3,12 @@ const logger = require('../../services/logger.service')
 const utilService = require('../../services/util.service')
 const ObjectId = require('mongodb').ObjectId
 
-async function query(filterBy = { txt: '', maxPrice: 0, inStock: true }) {
+
+async function query(filterBy = { name: '' }) {
     try {
-        const criteria = {
-            name: { $regex: filterBy.txt, $options: 'i' },
-            price: { $gte: filterBy.maxPrice },
-            // inStock: { $eq: filterBy.inStock }
-        }
+        const criteria = _buildCriteria(filterBy)
         const collection = await dbService.getCollection('toy')
-        var toys = await collection.find(criteria).toArray()
+        var toys = await collection.find(criteria).sort(sortCriteria(filterBy)).toArray()
         return toys
     } catch (err) {
         logger.error('cannot find toys', err)
@@ -56,7 +53,9 @@ async function update(toy) {
     try {
         const toyToSave = {
             name: toy.name,
-            price: toy.price
+            price: toy.price,
+            inStock: toy.inStock,
+            labels: toy.labels
         }
         const collection = await dbService.getCollection('toy')
         await collection.updateOne({ _id: ObjectId(toy._id) }, { $set: toyToSave })
@@ -67,12 +66,31 @@ async function update(toy) {
     }
 }
 
-async function addToyMsg(toyId, msg) {
+// async function addToyMsg(toyId, msg) {
+//     try {
+//         msg.id = utilService.makeId()
+//         const collection = await dbService.getCollection('toy')
+//         await collection.updateOne({ _id: ObjectId(toyId) }, { $push: { msgs: msg } })
+//         return msg
+//     } catch (err) {
+//         logger.error(`cannot add toy msg ${toyId}`, err)
+//         throw err
+//     }
+// }
+
+async function addToyMsg(toyId, msg, loggedinUser) {
     try {
-        msg.id = utilService.makeId()
+        const msgToSave = {
+            ...msg,
+            by: {
+                fullname: loggedinUser.fullname,
+                _id: loggedinUser._id
+            }
+        }
+        // msg.id = utilService.makeId()
         const collection = await dbService.getCollection('toy')
-        await collection.updateOne({ _id: ObjectId(toyId) }, { $push: { msgs: msg } })
-        return msg
+        await collection.updateOne({ _id: ObjectId(toyId) }, { $push: { msgs: msgToSave } })
+        return msgToSave
     } catch (err) {
         logger.error(`cannot add toy msg ${toyId}`, err)
         throw err
@@ -90,6 +108,43 @@ async function removeToyMsg(toyId, msgId) {
     }
 }
 
+
+
+function sortCriteria(filterBy) {
+    if (filterBy.sort === 'createdAt') {
+        return { 'createdAt': -1 }
+    }
+    if (filterBy.sort === 'highPrice') {
+        return { 'price': -1 }
+    }
+    if (filterBy.sort === 'lowPrice') {
+        return { 'price': 1 }
+    }
+    return
+
+}
+
+function _buildCriteria(filterBy) {
+    console.log('filterBy in toy service:', filterBy)
+    let criteria = {}
+    console.log('filterBy from build crateria', filterBy)
+    console.log('filterBy.price', filterBy.price)
+    if (filterBy.name) {
+        criteria.name = { $regex: new RegExp(filterBy.name, 'ig') }
+    }
+    // if (filterBy.price) {
+    //     criteria.price = { $gte: filterBy.price }
+    // }
+    // if (filterBy.inStock) {
+    //     // criteria.inStock = 'true'
+    //     criteria.inStock = true
+    // }
+    // if (filterBy?.labels?.length) {
+    //     criteria.lables = { $all: filterBy.labels }
+    // }
+    return criteria
+}
+
 module.exports = {
     remove,
     query,
@@ -97,5 +152,5 @@ module.exports = {
     add,
     update,
     addToyMsg,
-    removeToyMsg
+    removeToyMsg,
 }

@@ -6,8 +6,8 @@ import { store } from '../store.js'
 
 export async function loadToys(filterBy) {
     store.dispatch({ type: SET_IS_LOADING, isLoading: true })
-    const toys = await toyService.query(filterBy)
     try {
+        const toys = await toyService.query(filterBy)
         store.dispatch({ type: SET_TOYS, toys })
         return toys
     } catch (err) {
@@ -20,8 +20,8 @@ export async function loadToys(filterBy) {
 }
 
 export async function removeToy(toyId) {
-    const toys = await toyService.remove(toyId)
     try {
+        const toys = await toyService.remove(toyId)
         store.dispatch({ type: REMOVE_TOY, toyId })
         return toys
     } catch (err) {
@@ -32,9 +32,9 @@ export async function removeToy(toyId) {
 }
 
 export async function saveToy(toy) {
-    const type = (toy._id) ? UPDATE_TOY : ADD_TOY
-    const savedToy = toyService.save(toy)
     try {
+        const type = (toy._id) ? UPDATE_TOY : ADD_TOY
+        const savedToy = await toyService.save(toy)
         store.dispatch({ type, toy: savedToy })
         return savedToy
     } catch (err) {

@@ -5,10 +5,13 @@ const logger = require('../../services/logger.service')
 async function getToys(req, res) {
   try {
     logger.debug('Getting Toys')
+    console.log('req.query.params',req.query.params)
     const filterBy = {
-      txt: req.query.txt || '',
-      maxPrice: req.query.price || 0,
-      // inStock: req.query.inStock || true
+      name: req.query.params.filterBy.name || '',
+      price: req.query.params.filterBy.price || 0,
+      sort: req.query.params.filterBy.sort || '',
+      labels:req.query.params.filterBy.labels ||[],
+      // inStock: req.query.filterBy.inStock || true
     }
     const toys = await toyService.query(filterBy)
     res.json(toys)
@@ -71,11 +74,12 @@ async function addToyMsg(req, res) {
   const {loggedinUser} = req
   try {
     const toyId = req.params.id
-    const msg = {
-      txt: req.body.txt,
-      by: loggedinUser
-    }
-    const savedMsg = await toyService.addToyMsg(toyId, msg)
+    const {msg} = req.body
+    // const msg = {
+    //   txt: req.body.txt,
+    //   by: loggedinUser
+    // }
+    const savedMsg = await toyService.addToyMsg(toyId, msg, loggedinUser)
     res.json(savedMsg)
   } catch (err) {
     logger.error('Failed to update toy', err)

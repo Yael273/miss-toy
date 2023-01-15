@@ -3,12 +3,13 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import { MultiSelect } from "../cmps/multi-select"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
 import { toyService } from "../services/toy.service"
-import { loadToys } from "../store/action/toy.action"
+import { loadToys, saveToy } from "../store/action/toy.action"
 
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { useForm } from "../customHooks/useForm"
+import { FormControl, InputLabel, Select, MenuItem } from "@mui/material"
 // import { TextField } from '@mui/material';
 
 const SignupSchema = Yup.object().shape({
@@ -34,6 +35,7 @@ export function ToyEdit() {
     const [toyToEdit, setToyToEdit, handleChange] = useForm(toyService.getEmptyToy())
     const navigate = useNavigate()
     const { toyId } = useParams()
+    const labels = toyService.getLabels()
 
     // const toys = useSelector((storeState) => storeState.toyModule.toys)
 
@@ -58,11 +60,13 @@ export function ToyEdit() {
     //     value = type === 'number' ? +value : value
     //     setToyToEdit((prevToy) => ({ ...prevToy, [field]: value }))
     // }
+    
 
     async function onSaveToy(ev) {
         ev.preventDefault()
-       await toyService.save(toyToEdit)
-       try {
+        console.log('toyToEdit', toyToEdit);
+        try {
+           await saveToy(toyToEdit)
         console.log('toy saved', toyToEdit);
         showSuccessMsg('Toy saved!')
         navigate('/toy')
@@ -74,15 +78,19 @@ export function ToyEdit() {
     }
 
 
-    function onSetLabels(labels) {
-        setToyToEdit({ ...toyToEdit, labels })
-    }
+    // function onSetLabels(labels) {
+    //     setToyToEdit({ ...toyToEdit, labels })
+    // }
 
-    function getYesNo() {
-        return toyToEdit.inStock
-    }
+    // function getYesNo() {
+    //     return toyToEdit.inStock
+    // }
 
     return <section className="toy-edit">
+
+<div onClick={() => navigate('/toy')} className="black-screen"></div>
+
+<div className="toy-edit-modal">
         <h2>{toyToEdit._id ? 'Edit this toy' : 'Add a new toy'}</h2>
 
         <form onSubmit={onSaveToy}>
@@ -103,7 +111,42 @@ export function ToyEdit() {
                 onChange={handleChange}
             />
 
-            <div>
+                    <FormControl style={{ backgroundColor: '#fff' }} sx={{ m: 1, minWidth: 120}}>
+                        <InputLabel id="demo-simple-select-label">inStock</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={toyToEdit.inStock}
+                            label="Age"
+                            onChange={handleChange}
+                            name="inStock"
+                            className="edit-select"
+                        >
+                            <MenuItem value={true}>Yes</MenuItem>
+                            <MenuItem value={false}>No</MenuItem>
+                        </Select>
+                    </FormControl>
+
+            <FormControl style={{ backgroundColor: '#fff' }} sx={{ m: 1, minWidth: 120 }}>
+                        <InputLabel id="demo-simple-select-label">Type</InputLabel>
+                        <Select
+                            multiple
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={toyToEdit.labels}
+                            onChange={handleChange}
+                            name="labels"
+                        >
+
+                            {labels.map((label, idx) =>
+                                <MenuItem key={idx} value={label}>{label}</MenuItem>
+                            )}
+
+                        </Select>
+
+                    </FormControl>
+
+            {/* <div>
                 <MultiSelect onSetLabels={onSetLabels} />
             </div>
             <div>
@@ -114,11 +157,13 @@ export function ToyEdit() {
                     <option value={true}>Yes</option>
                     <option value={false}>No</option>
                 </select>
-            </div>
+            </div> */}
             <div className="add-save-btns">
                 <button className="btn btn-dark">{toyToEdit._id ? 'Save' : 'Add'}</button>
                 <Link to="/toy">Cancel</Link>
             </div>
+
+            
 
 
         </form>
@@ -148,6 +193,7 @@ export function ToyEdit() {
                 </Form>
             )}
         </Formik> */}
+        </div>
     </section>
 }
 

@@ -12,22 +12,24 @@ import { loadToys, removeToy, saveToy, setFilter } from "../store/action/toy.act
 export function ToyIndex() {
 
     const toys = useSelector((storeState) => storeState.toyModule.toys)
-    const filterBy = useSelector((storeState) => storeState.toyModule.filterBy)
-    const [sort, setSort] = useState(toyService.getDefaultSort())
+    // const filterBy = useSelector((storeState) => storeState.toyModule.filterBy)
+    // const [sort, setSort] = useState(toyService.getDefaultSort())
+    const [filterBy, setFilterBy] = useState(toyService.getDefaultFilter())
+
 
     console.log('toys', toys);
 
     useEffect(() => {
-        onLoadToys(filterBy, sort)
-    }, [filterBy, sort])
+        onLoadToys(filterBy)
+    }, [filterBy])
 
-    function setFilterBy(filterBy) {
-        setFilter(filterBy)
+    function onSetFilter(filterByFromFilter) {
+        setFilterBy(filterByFromFilter)
     }
 
     async function onLoadToys(filterBy) {
-        await loadToys(filterBy)
         try {
+            await loadToys(filterBy)
             showSuccessMsg('Toys loaded')
         } catch (err) {
             showErrorMsg('Cannot load toys')
@@ -45,15 +47,15 @@ export function ToyIndex() {
 
     }
 
-    function onSetSort(sort) {
-        setSort(sort)
-    }
+    // function onSetSort(sort) {
+    //     setSort(sort)
+    // }
 
     if (!toys) return <div>Loading...</div>
     return <section className="toy-index">
 
         <div className="filter-container">
-            <ToyFilter setFilterBy={setFilterBy} />
+            <ToyFilter onSetFilter={onSetFilter} />
             {/* <ToySort sort={sort} onSetSort={onSetSort} /> */}
             <Link to={`/toy/edit`}>
                 <button className="btn btn-dark toy-add">

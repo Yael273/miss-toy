@@ -11,6 +11,7 @@ router.get('/', log, getToys)
 router.get('/:id', getToyById)
 router.post('/', requireAuth, addToy)
 router.put('/:id', requireAuth, updateToy)
+// router.put('/:id', requireAuth, requireAdmin, updateToy)
 // router.delete('/:id', requireAuth, removeToy)
 router.delete('/:id', requireAuth, requireAdmin, removeToy)
 

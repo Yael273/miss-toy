@@ -15,20 +15,14 @@ export const toyService = {
     getDefaultFilter,
     getLabels,
     getDefaultSort,
-    getFilterFromSearchParams
+    getFilterFromSearchParams,
+    getEmptyMsg,
+    addToyMsg,
+    removeToyMsg
 }
 
-const labels = ["On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor", "Battery Powered"]
-const msgs = [{ txt: 'hello', createdAt: new Date() }]
-
-// const toy = {
-//     "_id": "t101",
-//     "name": "Talking Doll",
-//     "price": 123,
-//     "labels": ["Doll", "Battery Powered", "Baby"],
-//     "createdAt": 1631031801011,
-//     "inStock": true
-// }
+// const labels = ["On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor", "Battery Powered"]
+// const msgs = [{ txt: 'hello', createdAt: new Date() }]
 
 const toy = {
     _id: "t101",
@@ -53,7 +47,7 @@ const toy = {
 async function query(filterBy = getDefaultFilter()) {
     // const queryParams = `?name=${filterBy.txt}&maxPrice=${filterBy.maxPrice}`
     // return await httpService.get(BASE_URL + queryParams)
-    return httpService.get(BASE_URL, filterBy)
+    return httpService.get(BASE_URL, { params: { filterBy } })
 }
 
 async function getById(toyId) {
@@ -84,20 +78,46 @@ function getEmptyToy() {
         "price": 0,
         "labels": [],
         "createdAt": Date.now(),
-        "inStock": true
+        // "inStock": true
+        "inStock": '',
+        "msgs": []
     }
 }
 
 function getDefaultFilter() {
-    return { txt: '', maxPrice: 0, isStock: true, type: 'all', }
+    return { name: '', price: 0, sort: '', desc: 1, labels: getLabels(), inStock: '' }
 }
 
 function getDefaultSort() {
     return { by: 'name', asc: true }
 }
 
+function getEmptyMsg() {
+    return {
+        id: utilService.makeId(),
+        txt: ''
+    }
+}
+
 function getLabels() {
-    return labels
+    return [
+        "On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor", "Battery Powered"
+    ]
+}
+
+async function addToyMsg(toyId, msg) {
+    try {
+        const savedMsg = await httpService.post(`toy/${toyId}/msg`, { msg })
+        return savedMsg
+    } catch (e) {
+        /// do error handling 
+    }
+
+}
+
+async function removeToyMsg(toyId, msgId) {
+    await httpService.delete(`toy/${toyId}/msg/${msgId}`)
+
 }
 
 function getFilterFromSearchParams(searchParams) {

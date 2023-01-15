@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
 import { userService } from '../services/user.service.js'
 import { signup, login } from '../store/action/user.action.js'
+import { ImgUploader } from './img-uploader.jsx'
 
 
 // function getEmptyCredentials() {
@@ -44,6 +45,10 @@ export function LoginSignup({ setUser }) {
 
     function onToggleSignupState() {
         setIsSignupState(!isSignupState)
+    }
+
+    const onUploaded = (imgUrl) => {
+        setCredentials({ ...credentials, imgUrl })
     }
 
     const { username, password, fullname } = credentials
@@ -87,6 +92,7 @@ export function LoginSignup({ setUser }) {
                     onChange={handleCredentialsChange}
                     required
                 />}
+                 {isSignupState && <ImgUploader onUploaded={onUploaded}/>  }   
 
                 <button className='btn btn-dark'>{isSignupState ? 'Signup' : 'Login'}</button>
             </form>

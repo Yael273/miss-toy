@@ -10,7 +10,8 @@ export function UserDetails() {
     // if (!user) return <Loader />
     return user && <div className="profile-container">
         <div className="profile-image-container">
-            <img src={imgUrl} alt="" />
+            {/* <img src={imgUrl} alt="" /> */}
+            {user.imgUrl && <img src={user.imgUrl} />}
         </div>
         <h2>{user.fullname}</h2>
 

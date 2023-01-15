@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.3905a986.css",
-    "main.js": "/static/js/main.f9643727.js",
+    "main.css": "/static/css/main.c006fc6f.css",
+    "main.js": "/static/js/main.9cfd1e85.js",
+    "static/media/default2.png": "/static/media/default2.83c5514a7d1917960c37.png",
     "static/media/home-page.png": "/static/media/home-page.b94ff900d7aad96de19d.png",
     "static/media/default1.png": "/static/media/default1.5cbbefaa6f5ff31f6289.png",
+    "static/media/default3.png": "/static/media/default3.fe853afdbee9664d7bb2.png",
     "static/media/default-user.png": "/static/media/default-user.28e44cb7f5d2425541e5.png",
     "static/media/Product-Sans-Italic.ttf": "/static/media/Product-Sans-Italic.9f3855791ace888bfd09.ttf",
     "static/media/Product-Sans-Bold.ttf": "/static/media/Product-Sans-Bold.53df38d5491afbeb42a5.ttf",
     "static/media/Product-Sans-Regular.ttf": "/static/media/Product-Sans-Regular.d165384076551a756b3c.ttf",
     "static/media/toys-store.png": "/static/media/toys-store.5ed655203d3f9879e5e7.png",
     "index.html": "/index.html",
-    "main.3905a986.css.map": "/static/css/main.3905a986.css.map",
-    "main.f9643727.js.map": "/static/js/main.f9643727.js.map"
+    "main.c006fc6f.css.map": "/static/css/main.c006fc6f.css.map",
+    "main.9cfd1e85.js.map": "/static/js/main.9cfd1e85.js.map"
   },
   "entrypoints": [
-    "static/css/main.3905a986.css",
-    "static/js/main.f9643727.js"
+    "static/css/main.c006fc6f.css",
+    "static/js/main.9cfd1e85.js"
   ]
 }
